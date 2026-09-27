@@ -1,0 +1,127 @@
+{
+  "name": "my-v2-addon",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "ember-addon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-testem.git"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "exports": {
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./declarations/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./addon-main.js": "./addon-main.cjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "declarations/*"
+      ]
+    }
+  },
+  "files": [
+    "addon-main.cjs",
+    "declarations",
+    "dist",
+    "translations"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "build:test": "exit 0",
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:css": "stylelint \"**/*.css\" --allow-empty-input --cache",
+    "lint:css:fix": "stylelint \"**/*.css\" --allow-empty-input --fix",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" && pnpm format",
+    "lint:format": "prettier . --cache --check",
+    "lint:intl": "ember-intl-lint",
+    "lint:intl:fix": "ember-intl-lint --fix",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "prelint:types": "type-css-modules --src src",
+    "lint:types": "ember-tsc --noEmit",
+    "prepack": "rollup --config",
+    "start": "rollup --config --watch",
+    "test": "pnpm build:test && pnpm test:original",
+    "test:original": "echo \"A v2 addon does not have tests, run tests in my-v2-app\""
+  },
+  "dependencies": {
+    "@embroider/addon-shim": "^1.10.3",
+    "decorator-transforms": "^2.4.0",
+    "ember-container-query": "^7.1.5",
+    "ember-truth-helpers": "^5.0.0",
+    "embroider-css-modules": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.6",
+    "@babel/plugin-transform-typescript": "^8.0.6",
+    "@babel/runtime": "^8.0.5",
+    "@ember-intl/lint": "^2.1.0",
+    "@embroider/addon-dev": "^8.4.0",
+    "@glimmer/component": "^2.1.1",
+    "@glimmer/tracking": "^1.1.2",
+    "@glint/ember-tsc": "^1.11.6",
+    "@glint/template": "^1.9.0",
+    "@glint/tsserver-plugin": "^2.7.9",
+    "@shared-configs/eslint-config-ember": "workspace:*",
+    "@shared-configs/prettier": "workspace:*",
+    "@shared-configs/stylelint": "workspace:*",
+    "@shared-configs/typescript": "workspace:*",
+    "@rollup/plugin-babel": "^7.1.0",
+    "babel-plugin-ember-template-compilation": "^4.0.0",
+    "concurrently": "^10.0.5",
+    "ember-intl": "^9.1.0",
+    "ember-source": "~7.3.0",
+    "eslint": "^10.11.0",
+    "postcss": "^8.5.28",
+    "prettier": "^3.9.9",
+    "rollup": "^4.63.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "stylelint": "^17.15.0",
+    "type-css-modules": "^3.2.12",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "ember-intl": "^9.1.0"
+  },
+  "peerDependenciesMeta": {
+    "ember-intl": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "app-js": {
+      "./components/navigation-menu.js": "./dist/_app_/components/navigation-menu.js",
+      "./components/ui/form.js": "./dist/_app_/components/ui/form.js",
+      "./components/ui/form/checkbox.js": "./dist/_app_/components/ui/form/checkbox.js",
+      "./components/ui/form/field.js": "./dist/_app_/components/ui/form/field.js",
+      "./components/ui/form/information.js": "./dist/_app_/components/ui/form/information.js",
+      "./components/ui/form/input.js": "./dist/_app_/components/ui/form/input.js",
+      "./components/ui/form/number.js": "./dist/_app_/components/ui/form/number.js",
+      "./components/ui/form/select.js": "./dist/_app_/components/ui/form/select.js",
+      "./components/ui/form/textarea.js": "./dist/_app_/components/ui/form/textarea.js",
+      "./components/ui/page.js": "./dist/_app_/components/ui/page.js"
+    },
+    "main": "addon-main.cjs",
+    "public-assets": {},
+    "type": "addon",
+    "version": 2
+  }
+}

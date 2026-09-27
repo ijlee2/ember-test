@@ -12,7 +12,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm build:packages",
-    "build:packages": "exit 0",
+    "build:packages": "pnpm --filter my-v2-addon build",
     "format": "pnpm --filter \"*\" format",
     "lint": "pnpm --filter \"*\" lint && pnpm lint:package-json",
     "lint:fix": "pnpm --filter \"*\" lint:fix && pnpm lint:package-json:fix",
@@ -21,7 +21,7 @@
     "prepare": "pnpm build:packages",
     "release:prepare": "changeset version; update-workspace-root-version",
     "release:publish": "pnpm build:packages && changeset publish",
-    "test": "exit 0"
+    "test": "pnpm --filter \"./tests/**\" test"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3",

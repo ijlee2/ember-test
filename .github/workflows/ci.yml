@@ -29,3 +29,65 @@ jobs:
 
       - name: Lint
         run: pnpm lint
+
+
+  test-my-v2-addon:
+    name: Test (my-v2-addon)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test-scenario:
+          - 'original'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v2-addon'
+
+      - name: Test
+        run: pnpm test:${{ matrix.test-scenario }}
+        working-directory: 'tests/my-v2-addon'
+
+
+  test-my-v2-app:
+    name: Test (my-v2-app)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test-scenario:
+          - 'original'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v2-app'
+
+      - name: Test
+        run: pnpm test:${{ matrix.test-scenario }}
+        working-directory: 'tests/my-v2-app'
