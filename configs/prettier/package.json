@@ -1,0 +1,37 @@
+{
+  "name": "@shared-configs/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuration for prettier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-testem.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "exports": {
+    "./ember": "./ember/index.mjs",
+    "./node": "./node/index.mjs"
+  },
+  "scripts": {
+    "lint": "prettier \"**/*.mjs\" --cache --check",
+    "lint:fix": "prettier \"**/*.mjs\" --cache --write"
+  },
+  "dependencies": {
+    "@ijlee2-frontend-configs/prettier": "^3.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  },
+  "peerDependencies": {
+    "prettier": "^3.9.9"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  }
+}

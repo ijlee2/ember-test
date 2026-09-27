@@ -1,0 +1,24 @@
+{
+  "name": "@shared-configs/testem",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuration for testem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-testem.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "index.cjs",
+  "scripts": {
+    "lint": "prettier \"**/*.{cjs,mjs}\" --cache --check",
+    "lint:fix": "prettier \"**/*.{cjs,mjs}\" --cache --write"
+  },
+  "devDependencies": {
+    "@shared-configs/prettier": "workspace:*",
+    "prettier": "^3.9.9"
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  }
+}

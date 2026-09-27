@@ -1,0 +1,39 @@
+{
+  "name": "@shared-configs/typescript",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuration for typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-testem.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "exports": {
+    "./ember-addon": "./ember-addon/index.json",
+    "./ember-app": "./ember-app/index.json",
+    "./node": "./node/index.json"
+  },
+  "scripts": {
+    "lint": "prettier \"**/*.{json,mjs}\" --cache --check",
+    "lint:fix": "prettier \"**/*.{json,mjs}\" --cache --write"
+  },
+  "dependencies": {
+    "@ijlee2-frontend-configs/typescript": "^4.1.0"
+  },
+  "devDependencies": {
+    "@shared-configs/prettier": "workspace:*",
+    "prettier": "^3.9.9"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  }
+}
