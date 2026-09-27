@@ -1,0 +1,37 @@
+{
+  "extends": "@shared-configs/typescript/ember-app",
+  "compilerOptions": {
+    "paths": {
+      "my-v2-app/tests/*": ["./tests/*"],
+      "my-v2-app/*": ["./app/*"],
+      "*": ["./types/*"]
+    },
+    "plugins": [
+      {
+        "name": "@glint/tsserver-plugin"
+      }
+    ],
+    "rootDir": ".",
+    "types": [
+      "@ember-intl/vite/virtual",
+      "@embroider/core/virtual",
+      "@glint/ember-tsc/types",
+      "@types/qunit",
+      "@types/sinon",
+      "ember-source/types",
+      "vite/client"
+    ]
+  },
+  "include": ["app/**/*", "mirage/**/*", "tests/**/*", "types/**/*"],
+  "glint": {
+    "additionalSpecialForms": {
+      "globals": {
+        "and": "&&",
+        "eq": "===",
+        "not": "!",
+        "neq": "!==",
+        "or": "||"
+      }
+    }
+  }
+}
