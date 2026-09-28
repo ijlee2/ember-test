@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Hello! Thanks for taking time to suggest how we can improve `ember-testem`.
+Hello! Thanks for taking time to suggest how we can improve `ember-test`.
 
 Before you make a new issue, please search for similar issues. It's possible that someone has made a request already.
 

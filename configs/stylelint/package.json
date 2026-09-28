@@ -5,7 +5,7 @@
   "description": "Configuration for stylelint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ijlee2/ember-testem.git"
+    "url": "https://github.com/ijlee2/ember-test.git"
   },
   "author": "Isaac J. Lee",
   "type": "module",
