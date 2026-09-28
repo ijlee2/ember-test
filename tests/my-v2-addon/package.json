@@ -12,6 +12,12 @@
   },
   "license": "MIT",
   "author": "Isaac J. Lee",
+  "imports": {
+    "#src": "./src/index.ts",
+    "#src/*": "./src/*.ts",
+    "#tests/helpers": "./tests/helpers/index.ts",
+    "#tests/*": "./tests/*.ts"
+  },
   "exports": {
     ".": {
       "types": "./declarations/index.d.ts",
@@ -38,7 +44,7 @@
   ],
   "scripts": {
     "build": "rollup --config",
-    "build:test": "exit 0",
+    "build:test": "NODE_ENV=development vite build --config \"vite.test.config.mts\" --mode development --out-dir dist-for-testing",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\" --allow-empty-input --cache",
@@ -53,8 +59,8 @@
     "lint:types": "ember-tsc --noEmit",
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
-    "test": "pnpm build:test && pnpm test:original",
-    "test:original": "echo \"A v2 addon does not have tests, run tests in my-v2-app\""
+    "test": "pnpm build:test && pnpm test:ember-cli",
+    "test:ember-cli": "testem ci --file testem.cjs --port 0"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.10.3",
@@ -68,7 +74,12 @@
     "@babel/plugin-transform-typescript": "^8.0.6",
     "@babel/runtime": "^8.0.5",
     "@ember-intl/lint": "^2.1.0",
+    "@ember-intl/vite": "^2.0.4",
+    "@ember/test-helpers": "^5.5.0",
+    "@ember/test-waiters": "^4.1.2",
     "@embroider/addon-dev": "^8.4.0",
+    "@embroider/macros": "^1.21.1",
+    "@embroider/vite": "^1.7.13",
     "@glimmer/component": "^2.1.1",
     "@glimmer/tracking": "^1.1.2",
     "@glint/ember-tsc": "^1.11.6",
@@ -77,20 +88,29 @@
     "@shared-configs/eslint-config-ember": "workspace:*",
     "@shared-configs/prettier": "workspace:*",
     "@shared-configs/stylelint": "workspace:*",
+    "@shared-configs/testem": "workspace:*",
     "@shared-configs/typescript": "workspace:*",
     "@rollup/plugin-babel": "^7.1.0",
+    "@types/qunit": "^2.19.14",
     "babel-plugin-ember-template-compilation": "^4.0.0",
     "concurrently": "^10.0.5",
+    "ember-a11y-testing": "^8.0.1",
     "ember-intl": "^9.1.0",
+    "ember-qunit": "^9.1.0",
     "ember-source": "~7.3.0",
+    "ember-strict-application-resolver": "^0.1.1",
     "eslint": "^10.11.0",
     "postcss": "^8.5.28",
     "prettier": "^3.9.9",
+    "qunit": "^2.26.0",
+    "qunit-dom": "^3.6.0",
     "rollup": "^4.63.5",
     "rollup-plugin-postcss": "^4.0.2",
     "stylelint": "^17.15.0",
+    "testem": "^3.21.0",
     "type-css-modules": "^3.2.12",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite": "^7.3.1"
   },
   "peerDependencies": {
     "ember-intl": "^9.1.0"

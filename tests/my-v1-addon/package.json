@@ -27,13 +27,9 @@
       ]
     }
   },
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "scripts": {
     "_prepack": "tsc --project tsconfig.build.json",
-    "build": "ember build --environment=production",
+    "build": "ember build --environment production",
     "build:test": "ember build --environment test",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
@@ -47,8 +43,8 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "ember-tsc --noEmit",
     "start": "ember serve",
-    "test": "pnpm build:test && pnpm test:original",
-    "test:original": "ember test --path dist --test-port 0"
+    "test": "pnpm build:test && pnpm test:ember-cli",
+    "test:ember-cli": "ember test --path dist --test-port 0"
   },
   "dependencies": {
     "@babel/core": "^7.29.7",

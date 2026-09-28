@@ -1,1 +1,8 @@
-export { default } from '@shared-configs/eslint-config-ember/v2-addon';
+import baseConfiguration from '@shared-configs/eslint-config-ember/v2-addon';
+
+export default [
+  ...baseConfiguration,
+  {
+    ignores: ['dist-for-testing/'],
+  },
+];

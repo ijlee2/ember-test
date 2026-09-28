@@ -1,16 +1,21 @@
 {
   "extends": "@shared-configs/typescript/ember-addon",
   "compilerOptions": {
-    "declarationDir": "declarations",
     "plugins": [
       {
         "name": "@glint/tsserver-plugin"
       }
     ],
-    "rootDir": "./src",
-    "types": ["@glint/ember-tsc/types", "ember-source/types"]
+    "rootDir": ".",
+    "types": [
+      "@ember-intl/vite/virtual",
+      "@glint/ember-tsc/types",
+      "@types/qunit",
+      "ember-source/types",
+      "vite/client"
+    ]
   },
-  "include": ["src/**/*", "unpublished-development-types/**/*"],
+  "include": ["src/**/*", "unpublished-development-types/**/*", "tests/**/*"],
   "glint": {
     "additionalSpecialForms": {
       "globals": {
