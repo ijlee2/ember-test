@@ -5,11 +5,13 @@ import { babel } from '@rollup/plugin-babel';
 
 export default defineConfig({
   build: {
+    minify: false,
     rollupOptions: {
       input: {
         tests: 'tests/index.html',
       },
     },
+    sourcemap: true,
   },
   plugins: [
     ember(),
