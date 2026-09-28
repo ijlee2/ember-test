@@ -1,0 +1,24 @@
+.my-v1-addon__ui__form__input__input {
+  border: 0.125rem solid #ffd54f;
+  padding: 0.125rem 0.25rem;
+  width: calc(100% - 0.75rem);
+}
+
+.my-v1-addon__ui__form__input__input:focus {
+  background-color: #ffecb3;
+  outline: 0;
+}
+
+.my-v1-addon__ui__form__input__input:not(:focus) {
+  border-color: transparent;
+}
+
+.my-v1-addon__ui__form__input__input::placeholder {
+  font-style: italic;
+}
+
+.my-v1-addon__ui__form__input__is-disabled {
+  background-color: #9ea4b0;
+  color: #546e7a;
+  cursor: not-allowed;
+}

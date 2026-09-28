@@ -1,0 +1,95 @@
+.my-v1-addon__ui__form__field__container {
+  align-items: start;
+  display: grid;
+}
+
+.my-v1-addon__ui__form__field__container:not(
+  .my-v1-addon__ui__form__field__is-wide,
+  .my-v1-addon__ui__form__field__no-feedback
+) {
+  column-gap: 0;
+  grid-template-areas:
+    "label"
+    "field"
+    "feedback";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 0.5rem;
+}
+
+.my-v1-addon__ui__form__field__container:not(
+    .my-v1-addon__ui__form__field__is-wide
+  ).my-v1-addon__ui__form__field__no-feedback {
+  column-gap: 0;
+  grid-template-areas:
+    "label"
+    "field";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 0.5rem;
+}
+
+.my-v1-addon__ui__form__field__container.my-v1-addon__ui__form__field__is-wide:not(
+    .my-v1-addon__ui__form__field__no-feedback
+  ) {
+  column-gap: 1rem;
+  grid-template-areas:
+    "label field"
+    "label feedback";
+  grid-template-columns: 10rem 1fr;
+  grid-template-rows: 1fr auto;
+  row-gap: 0.5rem;
+}
+
+.my-v1-addon__ui__form__field__container.my-v1-addon__ui__form__field__is-wide.my-v1-addon__ui__form__field__no-feedback {
+  column-gap: 1rem;
+  grid-template-areas: "label field";
+  grid-template-columns: 10rem 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 0.5rem;
+}
+
+.my-v1-addon__ui__form__field__label {
+  grid-area: label;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.my-v1-addon__ui__form__field__field {
+  grid-area: field;
+}
+
+.my-v1-addon__ui__form__field__feedback {
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  grid-area: feedback;
+}
+
+.my-v1-addon__ui__form__field__feedback.my-v1-addon__ui__form__field__is-error {
+  color: #ff5252;
+}
+
+/* Exceptions for mobile */
+.my-v1-addon__ui__form__field__container.my-v1-addon__ui__form__field__is-inline:not(
+    .my-v1-addon__ui__form__field__is-wide,
+    .my-v1-addon__ui__form__field__no-feedback
+  ) {
+  column-gap: 1rem;
+  grid-template-areas:
+    "field label"
+    "feedback feedback";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  row-gap: 0.5rem;
+}
+
+.my-v1-addon__ui__form__field__container.my-v1-addon__ui__form__field__is-inline:not(
+    .my-v1-addon__ui__form__field__is-wide
+  ).my-v1-addon__ui__form__field__no-feedback {
+  column-gap: 1rem;
+  grid-template-areas: "field label";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 0;
+}

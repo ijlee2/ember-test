@@ -1,0 +1,37 @@
+.my-v1-addon__ui__form__select__select-container {
+  column-gap: 0.75rem;
+  display: grid;
+  grid-template-areas: "select clear-button";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+}
+
+.my-v1-addon__ui__form__select__select {
+  border: 0.125rem solid #ffd54f;
+  grid-area: select;
+  padding: 0.125rem 0.25rem;
+  width: calc(100% - 0.75rem);
+}
+
+.my-v1-addon__ui__form__select__select:focus {
+  background-color: #ffecb3;
+  outline: 0;
+}
+
+.my-v1-addon__ui__form__select__select:not(:focus) {
+  border-color: transparent;
+}
+
+.my-v1-addon__ui__form__select__select::placeholder {
+  font-style: italic;
+}
+
+.my-v1-addon__ui__form__select__is-disabled {
+  background-color: #9ea4b0;
+  color: #546e7a;
+  cursor: not-allowed;
+}
+
+.my-v1-addon__ui__form__select__clear-button {
+  grid-area: clear-button;
+}
