@@ -43,8 +43,10 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "ember-tsc --noEmit",
     "start": "ember serve",
-    "test": "pnpm build:test && pnpm test:ember-cli",
-    "test:ember-cli": "ember test --path dist --test-port 0"
+    "test": "pnpm build:test && pnpm test:ember-testem:default",
+    "test:ember-cli": "ember test --path dist --test-port 0",
+    "test:ember-testem:default": "ember-test --path dist --test-port 0",
+    "test:ember-testem:watch": "concurrently \"pnpm build:test --watch\" \"ember-test --path dist --server\" --names build,test"
   },
   "dependencies": {
     "@babel/core": "^7.29.7",
@@ -83,6 +85,7 @@
     "ember-qunit": "^9.1.0",
     "ember-resolver": "^13.2.0",
     "ember-source": "~6.12.0",
+    "ember-testem": "workspace:*",
     "eslint": "^10.11.0",
     "loader.js": "^4.7.0",
     "prettier": "^3.9.9",
