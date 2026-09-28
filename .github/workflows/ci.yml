@@ -229,7 +229,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: 'my-v2-addon-dist'
-          path: 'tests/my-v2-addon/dist'
+          path: 'tests/my-v2-addon/dist-for-testing'
 
 
   test-my-v2-addon:
@@ -265,7 +265,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: 'my-v2-addon-dist'
-          path: 'tests/my-v2-addon/dist'
+          path: 'tests/my-v2-addon/dist-for-testing'
 
       - name: Test
         run: pnpm test:${{ matrix.test-scenario }}
