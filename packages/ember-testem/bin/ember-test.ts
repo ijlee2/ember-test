@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+'use strict';
+
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
+
+import { run } from '../src/run.js';
+import type { CodemodOptions } from '../src/types/index.js';
+
+// Provide a title to the process in `ps`
+process.title = 'ember-test';
+
+// Set codemod options
+const argv = yargs(hideBin(process.argv))
+  .option('path', {
+    describe: 'Relative path to the test build',
+    type: 'string',
+  })
+  .option('root', {
+    describe: 'Where to run the codemod',
+    type: 'string',
+  })
+  .option('server', {
+    alias: 's',
+    describe: 'Launch test browser',
+    type: 'boolean',
+  })
+  .option('test-port', {
+    describe:
+      'Port for running tests. Pass 0 to automatically pick an available port.',
+    type: 'number',
+  })
+  .parseSync();
+
+const codemodOptions: CodemodOptions = {
+  buildPath: argv['path'] ?? 'dist',
+  projectRoot: argv['root'] ?? process.cwd(),
+  server: argv['server'],
+  testPort: argv['test-port'],
+};
+
+void run(codemodOptions);

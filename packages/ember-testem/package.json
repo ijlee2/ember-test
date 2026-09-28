@@ -1,0 +1,58 @@
+{
+  "name": "ember-testem",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "codemod",
+    "ember-codemod",
+    "emberjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-test.git"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "dist/src/run.js",
+  "bin": {
+    "ember-test": "dist/bin/ember-test.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "sh build.sh --production",
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" && pnpm format",
+    "lint:format": "prettier . --cache --check",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "tsc --noEmit",
+    "prepare": "pnpm build",
+    "test": "sh build.sh --test && mt dist-for-testing --quiet",
+    "update-test-fixtures": "./update-test-fixtures.sh"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "testem": "^3.21.0",
+    "yargs": "^18.2.0"
+  },
+  "devDependencies": {
+    "@codemod-utils/tests": "^3.3.0",
+    "@shared-configs/eslint-config-node": "workspace:*",
+    "@shared-configs/prettier": "workspace:*",
+    "@shared-configs/typescript": "workspace:*",
+    "@types/node": "^22.20.4",
+    "@types/yargs": "^17.0.35",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  }
+}
