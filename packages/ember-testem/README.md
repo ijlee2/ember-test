@@ -3,6 +3,238 @@
 _Forward- and backward-compatible testing for Ember projects_
 
 
+## Quickstart
+
+1\. Install `ember-testem` as a development dependency.
+
+```sh
+pnpm add -D ember-testem
+```
+
+2\. Configure `testem` in `testem.mjs`.
+
+```js
+export default {
+  browser_args: {
+    Chrome: {
+      ci: [
+        // --no-sandbox is needed when running Chrome inside a container
+        process.env.CI ? '--no-sandbox' : null,
+        '--headless',
+        '--disable-dev-shm-usage',
+        '--disable-software-rasterizer',
+        '--mute-audio',
+        '--remote-debugging-port=0',
+        '--window-size=1440,900',
+      ].filter(Boolean),
+    },
+  },
+  browser_start_timeout: 120,
+  disable_watching: true,
+  launch_in_ci: ['Chrome'],
+  launch_in_dev: ['Chrome'],
+  test_page: 'tests/index.html?hidepassed&nolint',
+};
+```
+
+3\. Update the `test` script in `package.json` so that it separates concerns. Build the test app, then run it.
+
+```diff
+{
+  "scripts": {
+    "build": "..."
++     "build:test": "...",
+-     "test": "ember test"
++     "test": "pnpm build:test && ember-test"
+  },
+  "devDependencies": {
++     "ember-testem": "..."
+  }
+}
+```
+
+<details>
+
+<summary>V1 addons</summary>
+
+See [my-v1-addon](../../tests/my-v1-addon) for an example.
+
+```json
+{
+  "scripts": {
+    "build": "ember build --environment production",
+    "build:test": "ember build --environment test"
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary>V1 apps</summary>
+
+See [my-v1-app](../../tests/my-v1-app) for an example.
+
+```json
+{
+  "scripts": {
+    "build": "ember build --environment production",
+    "build:test": "ember build --environment test"
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary>V2 addons</summary>
+
+See [my-v2-addon](../../tests/my-v2-addon) for an example.
+
+For brevity, additional file changes aren't shown below. For example, you will need to split the Babel and TypeScript configurations into two files: one for production and another for testing.
+
+```json
+{
+  "scripts": {
+    "build": "rollup --config",
+    "build:test": "NODE_ENV=development vite build --config \"vite.test.config.mts\" --mode development"
+  }
+}
+```
+
+```ts
+/* vite.test.config.mts */
+import { extensions, ember } from '@embroider/vite';
+import { babel } from '@rollup/plugin-babel';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  build: {
+    minify: false,
+    rollupOptions: {
+      input: {
+        tests: 'tests/index.html',
+      },
+    },
+    sourcemap: true,
+  },
+  plugins: [
+    ember(),
+    babel({
+      babelHelpers: 'inline',
+      extensions,
+    }),
+  ],
+});
+```
+
+</details>
+
+<details>
+
+<summary>V2 apps</summary>
+
+See [my-v2-app](../../tests/my-v2-app) for an example.
+
+```json
+{
+  "scripts": {
+    "build": "vite build",
+    "build:test": "NODE_ENV=development vite build --config \"vite.test.config.mts\" --mode development"
+  }
+}
+```
+
+```ts
+/* vite.test.config.mts */
+import type { UserConfig } from 'vite';
+
+import baseConfiguration from './vite.config.mts';
+
+export default {
+  ...baseConfiguration,
+  build: {
+    minify: false,
+    sourcemap: true,
+  },
+} satisfies UserConfig;
+```
+
+</details>
+
+
+### Arguments
+
+<details>
+
+<summary>Optional: Launch test browser</summary>
+
+Pass `--server` (`-s`) to launch a browser. This may be useful for debugging (e.g. with `debugger` or `await this.pauseTest()`) and re-running the tests after a code change (don't forget to pass `--watch` to `build:test`).
+
+```sh
+ember-test --server
+```
+
+</details>
+
+<details>
+
+<summary>Optional: Specify filters for QUnit</summary>
+
+The `--module` (`-m`) option allows you to select a module—a group of tests inside a `module()`.
+
+```sh
+ember-test --module "Integration | Component | ui/form/input"
+```
+
+The `--filter` (`-f`) is more versatile. You can provide a keyword to match against the modules and test descriptions. A test description is what appears in `test()`.
+
+```sh
+ember-test --filter integration
+ember-test --filter ui/form
+# Exclude acceptance tests
+ember-test --filter \!acceptance
+```
+
+</details>
+
+<details>
+
+<summary>Optional: Specify path to test build</summary>
+
+By default, `ember-testem` assumes `dist` to be the path to the test build.
+
+Pass `--path` to indicate otherwise. This may be useful if you want to create the production and test builds in different locations.
+
+```sh
+ember-test --path "dist-for-testing"
+```
+
+</details>
+
+<details>
+
+<summary>Optional: Specify test port</summary>
+
+By default, `ember-testem` runs tests on port `7357`.
+
+Pass `--test-port` to pick a different port. You can pass `0` to pick any available port (useful for testing multiple projects in parallel).
+
+```sh
+ember-test --test-port 0
+```
+
+</details>
+
+> [!NOTE]
+>
+> `ember-testem` provides a limited API on purpose.
+>
+> For `ember-cli` options like `--host`, `--launch`, `--reporter`, `--ssl`, `--ssl-cert`, `--ssl-key`, `--test-page`, `--testem-debug`), [configure `testem` in `testem.mjs` instead](https://github.com/ember-cli/ember-cli/blob/v7.3.0-ember-cli/lib/tasks/test.js#L54-L71).
+
+
 ## Compatibility
 
 - Node.js v22 or above
