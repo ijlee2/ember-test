@@ -59,8 +59,40 @@ jobs:
         working-directory: 'packages/ember-testem'
 
 
+  build-test-app-my-v1-addon:
+    name: Build test app (my-v1-addon)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v1-addon'
+
+      - name: Upload test app
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'my-v1-addon-dist'
+          path: 'tests/my-v1-addon/dist'
+
+
   test-my-v1-addon:
     name: Test (my-v1-addon)
+    needs: [build-test-app-my-v1-addon]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -87,17 +119,51 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build test app
-        run: pnpm build:test
-        working-directory: 'tests/my-v1-addon'
+      - name: Download test app
+        uses: actions/download-artifact@v8
+        with:
+          name: 'my-v1-addon-dist'
+          path: 'tests/my-v1-addon/dist'
 
       - name: Test
         run: pnpm test:${{ matrix.test-scenario }}
         working-directory: 'tests/my-v1-addon'
+
+
+  build-test-app-my-v1-app:
+    name: Build test app (my-v1-app)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v1-app'
+
+      - name: Upload test app
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'my-v1-app-dist'
+          path: 'tests/my-v1-app/dist'
 
 
   test-my-v1-app:
     name: Test (my-v1-app)
+    needs: [build-test-app-my-v1-app]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -124,17 +190,51 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build test app
-        run: pnpm build:test
-        working-directory: 'tests/my-v1-app'
+      - name: Download test app
+        uses: actions/download-artifact@v8
+        with:
+          name: 'my-v1-app-dist'
+          path: 'tests/my-v1-app/dist'
 
       - name: Test
         run: pnpm test:${{ matrix.test-scenario }}
         working-directory: 'tests/my-v1-app'
+
+
+  build-test-app-my-v2-addon:
+    name: Build test app (my-v2-addon)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v2-addon'
+
+      - name: Upload test app
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'my-v2-addon-dist'
+          path: 'tests/my-v2-addon/dist'
 
 
   test-my-v2-addon:
     name: Test (my-v2-addon)
+    needs: [build-test-app-my-v2-addon]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -161,26 +261,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build test app
-        run: pnpm build:test
-        working-directory: 'tests/my-v2-addon'
+      - name: Download test app
+        uses: actions/download-artifact@v8
+        with:
+          name: 'my-v2-addon-dist'
+          path: 'tests/my-v2-addon/dist'
 
       - name: Test
         run: pnpm test:${{ matrix.test-scenario }}
         working-directory: 'tests/my-v2-addon'
 
 
-  test-my-v2-app:
-    name: Test (my-v2-app)
+  build-test-app-my-v2-app:
+    name: Build test app (my-v2-app)
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        test-scenario:
-          - 'ember-cli'
-          - 'ember-testem:default'
-          - 'ember-testem:filter-by-filter'
-          - 'ember-testem:filter-by-module'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -201,6 +295,48 @@ jobs:
       - name: Build test app
         run: pnpm build:test
         working-directory: 'tests/my-v2-app'
+
+      - name: Upload test app
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'my-v2-app-dist'
+          path: 'tests/my-v2-app/dist'
+
+
+  test-my-v2-app:
+    name: Test (my-v2-app)
+    needs: [build-test-app-my-v2-app]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test-scenario:
+          - 'ember-cli'
+          - 'ember-testem:default'
+          - 'ember-testem:filter-by-filter'
+          - 'ember-testem:filter-by-module'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download test app
+        uses: actions/download-artifact@v8
+        with:
+          name: 'my-v2-app-dist'
+          path: 'tests/my-v2-app/dist'
 
       - name: Test
         run: pnpm test:${{ matrix.test-scenario }}
