@@ -1,0 +1,54 @@
+{
+  "extends": "@shared-configs/typescript/ember-app",
+  "compilerOptions": {
+    "paths": {
+      "my-v1-app/tests/*": ["./tests/*"],
+      "my-v1-app/*": ["./app/*"],
+      "my-v1-addon": ["../my-v1-addon/addon/index"],
+      "my-v1-addon/test-support": ["../my-v1-addon/addon-test-support/index"],
+      "my-v1-addon/*": ["../my-v1-addon/addon/*"],
+      "*": ["./types/*"]
+    },
+    "plugins": [
+      {
+        "name": "@glint/tsserver-plugin"
+      }
+    ],
+    "rootDir": "..",
+    "types": [
+      "@glint/ember-tsc/types",
+      "@types/qunit",
+      "@types/sinon",
+      "ember-source/types"
+    ]
+  },
+  "include": ["app/**/*", "mirage/**/*", "tests/**/*", "types/**/*"],
+  "glint": {
+    "additionalSpecialForms": {
+      "imports": {
+        "ember-truth-helpers": {
+          "and": "&&",
+          "eq": "===",
+          "not": "!",
+          "not-eq": "!==",
+          "or": "||"
+        },
+        "ember-truth-helpers/helpers/and": {
+          "default": "&&"
+        },
+        "ember-truth-helpers/helpers/eq": {
+          "default": "==="
+        },
+        "ember-truth-helpers/helpers/not": {
+          "default": "!"
+        },
+        "ember-truth-helpers/helpers/not-eq": {
+          "default": "!=="
+        },
+        "ember-truth-helpers/helpers/or": {
+          "default": "||"
+        }
+      }
+    }
+  }
+}
