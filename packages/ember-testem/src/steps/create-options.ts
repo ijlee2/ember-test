@@ -1,9 +1,11 @@
 import type { CodemodOptions, Options } from '../types/index.js';
 
 export function createOptions(codemodOptions: CodemodOptions): Options {
-  const { projectRoot } = codemodOptions;
+  const { buildPath, projectRoot, testPort } = codemodOptions;
 
   return {
+    buildPath,
     projectRoot,
+    testPort,
   };
 }
