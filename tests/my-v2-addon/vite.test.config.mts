@@ -1,3 +1,4 @@
+import { loadTranslations } from '@ember-intl/vite';
 import { defineConfig } from 'vite';
 import { extensions, ember } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
@@ -16,5 +17,6 @@ export default defineConfig({
       babelHelpers: 'inline',
       extensions,
     }),
+    loadTranslations(),
   ],
 });
