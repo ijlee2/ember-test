@@ -1,5 +1,15 @@
 # my-v2-app
 
+## 0.2.0
+
+### Minor Changes
+
+- [#7](https://github.com/ijlee2/ember-test/pull/7) Supported filters ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#9](https://github.com/ijlee2/ember-test/pull/9) Converted testem config to ESM ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.0
 
 ### Minor Changes
