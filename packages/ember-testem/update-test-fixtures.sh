@@ -20,4 +20,5 @@ rm -r "tests/fixtures/my-project/output"
 cp -r "tests/fixtures/my-project/input" "tests/fixtures/my-project/output"
 
 ./dist/bin/ember-test.js \
-  --root "tests/fixtures/my-project/output"
+  --root "tests/fixtures/my-project/output" \
+  --test-port "0"

@@ -4,15 +4,15 @@ import { run } from '../../src/run.js';
 import { inputProject, outputProject } from '../fixtures/my-project/index.js';
 import { codemodOptions } from '../helpers/shared-test-setups/my-project.js';
 
-test('run > my-project', function () {
+test('run > my-project', async function () {
   loadFixture(inputProject, codemodOptions);
 
-  run(codemodOptions);
+  await run(codemodOptions);
 
   assertFixture(outputProject, codemodOptions);
 
   // Check idempotence
-  run(codemodOptions);
+  await run(codemodOptions);
 
   assertFixture(outputProject, codemodOptions);
 });
