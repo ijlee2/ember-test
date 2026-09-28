@@ -12,9 +12,6 @@
 ## Local development
 
 ```sh
-# Run the app
-pnpm start
-
 # Lint files
 pnpm lint
 pnpm lint:fix

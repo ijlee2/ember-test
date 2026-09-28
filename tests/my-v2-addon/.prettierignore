@@ -5,6 +5,7 @@
 # misc
 !.*
 .*/
+README.md
 
 # specific to this package
 *.css.d.ts

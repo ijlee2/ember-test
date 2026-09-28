@@ -1,6 +1,6 @@
-[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/ember-testem/actions/workflows/ci.yml/badge.svg)](https://github.com/ijlee2/ember-testem/actions/workflows/ci.yml)
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/ember-test/actions/workflows/ci.yml/badge.svg)](https://github.com/ijlee2/ember-test/actions/workflows/ci.yml)
 
-# ember-testem
+# ember-test
 
 _Forward- and backward-compatible testing for Ember projects_
 
