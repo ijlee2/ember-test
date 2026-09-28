@@ -32,10 +32,10 @@
     "start": "vite",
     "test": "pnpm build:test && pnpm test:ember-testem:default",
     "test:ember-cli": "ember test --path dist --test-port 0",
-    "test:ember-testem:default": "ember-test --path dist --test-port 0",
-    "test:ember-testem:filter-by-filter": "ember-test --filter \"!acceptance\" --path dist --test-port 0",
-    "test:ember-testem:filter-by-module": "ember-test --module \"Acceptance | products\" --path dist --test-port 0",
-    "test:ember-testem:watch": "concurrently \"pnpm build:test --watch\" \"ember-test --path dist --server\" --names build,test"
+    "test:ember-testem:default": "ember-test --test-port 0",
+    "test:ember-testem:filter-by-filter": "ember-test --filter \"!acceptance\" --test-port 0",
+    "test:ember-testem:filter-by-module": "ember-test --module \"Acceptance | products\" --test-port 0",
+    "test:ember-testem:watch": "concurrently \"pnpm build:test --watch\" \"ember-test --server\" --names build,test"
   },
   "devDependencies": {
     "@babel/core": "^8.0.6",
