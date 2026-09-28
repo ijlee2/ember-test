@@ -2,10 +2,12 @@ type CodemodOptions = {
   buildPath: string;
   projectRoot: string;
   testPort: number | undefined;
+  server: boolean | undefined;
 };
 
 type Options = {
   buildPath: string;
+  launchBrowser: boolean;
   projectRoot: string;
   testPort: number | undefined;
 };

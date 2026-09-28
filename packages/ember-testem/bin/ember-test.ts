@@ -20,6 +20,11 @@ const argv = yargs(hideBin(process.argv))
     describe: 'Where to run the codemod',
     type: 'string',
   })
+  .option('server', {
+    alias: 's',
+    describe: 'Launch test browser',
+    type: 'boolean',
+  })
   .option('test-port', {
     describe:
       'Port for running tests. Pass 0 to automatically pick an available port.',
@@ -30,6 +35,7 @@ const argv = yargs(hideBin(process.argv))
 const codemodOptions: CodemodOptions = {
   buildPath: argv['path'] ?? 'dist',
   projectRoot: argv['root'] ?? process.cwd(),
+  server: argv['server'],
   testPort: argv['test-port'],
 };
 
