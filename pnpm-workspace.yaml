@@ -12,6 +12,7 @@ minimumReleaseAgeExclude:
 
 packages:
   - "configs/**"
+  - "packages/ember-testem"
   - "tests/**"
 
 publicHoistPattern:
