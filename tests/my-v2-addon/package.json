@@ -53,8 +53,8 @@
     "lint:types": "ember-tsc --noEmit",
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
-    "test": "pnpm build:test && pnpm test:original",
-    "test:original": "echo \"A v2 addon does not have tests, run tests in my-v2-app\""
+    "test": "pnpm build:test && pnpm test:ember-cli",
+    "test:ember-cli": "echo \"A v2 addon does not have tests, run tests in my-v2-app\""
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.10.3",
