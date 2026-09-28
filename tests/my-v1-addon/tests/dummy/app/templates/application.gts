@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <main>
+      <div>
+        {{outlet}}
+      </div>
+    </main>
+  </div>
+</template>

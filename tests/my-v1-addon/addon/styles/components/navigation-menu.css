@@ -1,0 +1,21 @@
+.my-v1-addon__navigation-menu__list {
+  align-items: center;
+  display: flex;
+}
+
+.my-v1-addon__navigation-menu__link {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.my-v1-addon__navigation-menu__link.active {
+  background-color: #15202d;
+}
+
+.my-v1-addon__navigation-menu__link:hover {
+  background-color: #26313d;
+  transition: background-color 0.17s;
+}
