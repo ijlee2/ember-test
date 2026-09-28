@@ -61,6 +61,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
+          - 'ember-testem:default'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -92,6 +93,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
+          - 'ember-testem:default'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -123,6 +125,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
+          - 'ember-testem:default'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -154,6 +157,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
+          - 'ember-testem:default'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
