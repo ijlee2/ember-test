@@ -23,6 +23,7 @@ const argv = yargs(hideBin(process.argv))
     type: 'string',
   })
   .option('path', {
+    default: 'dist',
     describe: 'Relative path to the test build',
     type: 'string',
   })
@@ -32,7 +33,7 @@ const argv = yargs(hideBin(process.argv))
     type: 'number',
   })
   .option('root', {
-    describe: 'Where to run the codemod',
+    describe: 'Project root',
     type: 'string',
   })
   .option('server', {
@@ -49,7 +50,7 @@ const argv = yargs(hideBin(process.argv))
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
-  buildPath: argv['path'] ?? 'dist',
+  buildPath: argv['path'],
   filters: {
     filter: argv['filter'],
     module: argv['module'],
