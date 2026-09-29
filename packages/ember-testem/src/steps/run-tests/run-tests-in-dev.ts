@@ -7,13 +7,13 @@ import type { Options } from '../../types/index.js';
 import { getQueryParams } from '../../utils/run-tests/get-query-params.js';
 
 export async function runTestsInDev(options: Options): Promise<void> {
-  const { buildPath, filters, projectRoot, testPort } = options;
+  const { buildPath, filters, port, projectRoot } = options;
 
   const testemInstance = new Testem();
 
   const startOptions = {
     launch: false,
-    port: testPort,
+    port,
   };
 
   testemInstance.setDefaultOptions({

@@ -6,9 +6,9 @@ const codemodOptions: CodemodOptions = {
     filter: undefined,
     module: undefined,
   },
+  port: 0,
   projectRoot: 'tmp/my-project',
   server: undefined,
-  testPort: 0,
 };
 
 const options: Options = {
@@ -18,8 +18,8 @@ const options: Options = {
     module: undefined,
   },
   launchBrowser: false,
+  port: 0,
   projectRoot: 'tmp/my-project',
-  testPort: 0,
 };
 
 export { codemodOptions, options };

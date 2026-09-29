@@ -4,8 +4,8 @@ type CodemodOptions = {
     filter: string | undefined;
     module: string | undefined;
   };
+  port: number | undefined;
   projectRoot: string;
-  testPort: number | undefined;
   server: boolean | undefined;
 };
 
@@ -16,8 +16,8 @@ type Options = {
     module: string | undefined;
   };
   launchBrowser: boolean;
+  port: number | undefined;
   projectRoot: string;
-  testPort: number | undefined;
 };
 
 export type { CodemodOptions, Options };

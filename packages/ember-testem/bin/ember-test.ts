@@ -26,6 +26,11 @@ const argv = yargs(hideBin(process.argv))
     describe: 'Relative path to the test build',
     type: 'string',
   })
+  .option('port', {
+    describe:
+      'Port for running tests. Pass 0 to automatically pick an available port.',
+    type: 'number',
+  })
   .option('root', {
     describe: 'Where to run the codemod',
     type: 'string',
@@ -40,6 +45,7 @@ const argv = yargs(hideBin(process.argv))
       'Port for running tests. Pass 0 to automatically pick an available port.',
     type: 'number',
   })
+  .deprecateOption('test-port', 'Use --port instead.')
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
@@ -48,9 +54,9 @@ const codemodOptions: CodemodOptions = {
     filter: argv['filter'],
     module: argv['module'],
   },
+  port: argv['test-port'] ?? argv['port'],
   projectRoot: argv['root'] ?? process.cwd(),
   server: argv['server'],
-  testPort: argv['test-port'],
 };
 
 void run(codemodOptions);

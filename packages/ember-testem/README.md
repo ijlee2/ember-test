@@ -220,10 +220,10 @@ ember-test --path "dist-for-testing"
 
 By default, `ember-testem` runs tests on port `7357`.
 
-Pass `--test-port` to pick a different port. You can pass `0` to pick any available port (useful for testing multiple projects in parallel).
+Pass `--port` (or `--test-port`, currently supported for backward compatibility) to pick a different port. You can pass `0` to pick any available port (useful for testing multiple projects in parallel).
 
 ```sh
-ember-test --test-port 0
+ember-test --port 0
 ```
 
 </details>
