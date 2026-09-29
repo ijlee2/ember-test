@@ -1,5 +1,11 @@
 # my-v1-addon
 
+## 0.2.1
+
+### Patch Changes
+
+- [#11](https://github.com/ijlee2/ember-test/pull/11) Simplified scripts ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes

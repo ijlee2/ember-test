@@ -1,5 +1,11 @@
 # ember-testem
 
+## 0.3.0
+
+### Minor Changes
+
+- [#11](https://github.com/ijlee2/ember-test/pull/11) Renamed --test-port to --port. Deprecated --test-port. ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes
