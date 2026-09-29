@@ -2,7 +2,12 @@
 
 # ember-test
 
-_Forward- and backward-compatible testing for Ember projects_
+_Backward- and forward-compatible testing for Ember projects_
+
+
+## Package overview
+
+- [ember-testem](./packages/ember-testem/README.md)
 
 
 ## Compatibility

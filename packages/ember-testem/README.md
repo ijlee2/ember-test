@@ -1,11 +1,11 @@
 # ember-testem
 
-_Forward- and backward-compatible testing for Ember projects_
+_Backward- and forward-compatible testing for Ember projects_
 
 
 ## Quickstart
 
-1\. Install `ember-testem` as a development dependency.
+1\. Install `ember-testem` as a development dependency. The package provides an executable named `ember-test`.
 
 ```sh
 pnpm add -D ember-testem
@@ -46,12 +46,16 @@ export default {
 +     "build:test": "...",
 -     "test": "ember test"
 +     "test": "pnpm build:test && ember-test"
++     "test:watch": "concurrently \"pnpm build:test --watch\" && \"pnpm ember-test --server\" --names build,test"
   },
   "devDependencies": {
+    "concurrently": "...",
 +     "ember-testem": "..."
   }
 }
 ```
+
+Note, `test:watch` can encounter race conditions. Once the test build is complete, refresh the test browser to see the latest results.
 
 <details>
 
@@ -99,7 +103,7 @@ For brevity, additional file changes aren't shown below. For example, you will n
 {
   "scripts": {
     "build": "rollup --config",
-    "build:test": "NODE_ENV=development vite build --config \"vite.test.config.mts\" --mode development"
+    "build:test": "NODE_ENV=development vite build --config vite.test.config.mts --mode development"
   }
 }
 ```
@@ -125,6 +129,7 @@ export default defineConfig({
     babel({
       babelHelpers: 'inline',
       extensions,
+      parallel: true,
     }),
   ],
 });
@@ -142,24 +147,24 @@ See [my-v2-app](../../tests/my-v2-app) for an example.
 {
   "scripts": {
     "build": "vite build",
-    "build:test": "NODE_ENV=development vite build --config \"vite.test.config.mts\" --mode development"
+    "build:test": "NODE_ENV=development vite build --config vite.test.config.mts --mode development"
   }
 }
 ```
 
 ```ts
 /* vite.test.config.mts */
-import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 
 import baseConfiguration from './vite.config.mts';
 
-export default {
+export default defineConfig({
   ...baseConfiguration,
   build: {
     minify: false,
     sourcemap: true,
   },
-} satisfies UserConfig;
+});
 ```
 
 </details>
@@ -209,7 +214,7 @@ By default, `ember-testem` assumes `dist` to be the path to the test build.
 Pass `--path` to indicate otherwise. This may be useful if you want to create the production and test builds in different locations.
 
 ```sh
-ember-test --path "dist-for-testing"
+ember-test --path dist-for-testing
 ```
 
 </details>
