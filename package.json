@@ -18,7 +18,7 @@
     "lint": "pnpm --filter \"*\" lint && pnpm lint:package-json",
     "lint:fix": "pnpm --filter \"*\" lint:fix && pnpm lint:package-json:fix",
     "lint:package-json": "pnpm lint:package-json:fix --check",
-    "lint:package-json:fix": "sort-package-json \"**/package.json\" --ignore \"**/{blueprints,dist,dist-for-testing,node_modules,tests,tmp}/**\"",
+    "lint:package-json:fix": "sort-package-json \"**/package.json\" --ignore \"**/{blueprints,dist,dist-for-testing,node_modules,tmp}/**\"",
     "prepare": "pnpm build",
     "release:prepare": "changeset version; update-workspace-root-version",
     "release:publish": "pnpm build:packages && changeset publish",

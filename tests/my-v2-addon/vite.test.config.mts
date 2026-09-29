@@ -14,10 +14,12 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [
+    // @ts-expect-error: Incorrect type
     ember(),
     babel({
       babelHelpers: 'inline',
       extensions,
+      parallel: true,
     }),
     loadTranslations(),
   ],

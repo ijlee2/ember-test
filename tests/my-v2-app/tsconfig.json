@@ -22,7 +22,13 @@
       "vite/client"
     ]
   },
-  "include": ["app/**/*", "mirage/**/*", "tests/**/*", "types/**/*"],
+  "include": [
+    "app/**/*",
+    "mirage/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "**/*.mts"
+  ],
   "glint": {
     "additionalSpecialForms": {
       "globals": {

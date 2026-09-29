@@ -26,12 +26,12 @@
     "prelint:types": "type-css-modules --src app",
     "lint:types": "ember-tsc --noEmit",
     "start": "ember serve",
-    "test": "pnpm build:test && pnpm test:ember-testem:default",
+    "test": "pnpm build:test && pnpm test:ember-testem",
     "test:ember-cli": "ember test --path dist --test-port 0",
-    "test:ember-testem:default": "ember-test --test-port 0",
-    "test:ember-testem:filter-by-filter": "ember-test --filter \"integration\" --test-port 0",
-    "test:ember-testem:filter-by-module": "ember-test --module \"Acceptance | form\" --test-port 0",
-    "test:ember-testem:watch": "concurrently \"pnpm build:test --watch\" \"ember-test --server\" --names build,test"
+    "test:ember-testem": "ember-test --port 0",
+    "test:ember-testem:filter-by-filter": "ember-test --filter \"integration\" --port 0",
+    "test:ember-testem:filter-by-module": "ember-test --module \"Acceptance | form\" --port 0",
+    "test:watch": "concurrently \"pnpm build:test --watch\" \"pnpm test:ember-testem --server\" --names build,test"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
