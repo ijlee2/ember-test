@@ -99,7 +99,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
-          - 'ember-testem:default'
+          - 'ember-testem'
           - 'ember-testem:filter-by-filter'
           - 'ember-testem:filter-by-module'
     timeout-minutes: 5
@@ -170,7 +170,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
-          - 'ember-testem:default'
+          - 'ember-testem'
           - 'ember-testem:filter-by-filter'
           - 'ember-testem:filter-by-module'
     timeout-minutes: 5
@@ -241,7 +241,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
-          - 'ember-testem:default'
+          - 'ember-testem'
           - 'ember-testem:filter-by-filter'
           - 'ember-testem:filter-by-module'
     timeout-minutes: 5
@@ -312,7 +312,7 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-cli'
-          - 'ember-testem:default'
+          - 'ember-testem'
           - 'ember-testem:filter-by-filter'
           - 'ember-testem:filter-by-module'
     timeout-minutes: 5

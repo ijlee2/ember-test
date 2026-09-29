@@ -1,13 +1,13 @@
 import type { CodemodOptions, Options } from '../types/index.js';
 
 export function createOptions(codemodOptions: CodemodOptions): Options {
-  const { buildPath, filters, projectRoot, server, testPort } = codemodOptions;
+  const { buildPath, filters, port, projectRoot, server } = codemodOptions;
 
   return {
     buildPath,
     filters,
     launchBrowser: Boolean(server),
+    port,
     projectRoot,
-    testPort,
   };
 }

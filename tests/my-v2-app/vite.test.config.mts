@@ -1,11 +1,11 @@
-import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 
 import baseConfiguration from './vite.config.mts';
 
-export default {
+export default defineConfig({
   ...baseConfiguration,
   build: {
     minify: false,
     sourcemap: true,
   },
-} satisfies UserConfig;
+});
