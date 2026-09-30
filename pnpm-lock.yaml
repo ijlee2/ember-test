@@ -333,6 +333,55 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  packages/install-ember-testem:
+    dependencies:
+      '@codemod-utils/ast-javascript':
+        specifier: ^4.3.3
+        version: 4.3.3
+      '@codemod-utils/blueprints':
+        specifier: ^3.2.0
+        version: 3.2.0
+      '@codemod-utils/files':
+        specifier: ^4.1.0
+        version: 4.1.0
+      '@codemod-utils/package-json':
+        specifier: ^4.1.2
+        version: 4.1.2
+      yargs:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@codemod-utils/tests':
+        specifier: ^3.3.0
+        version: 3.3.0
+      '@shared-configs/eslint-config-node':
+        specifier: workspace:*
+        version: link:../../configs/eslint/node
+      '@shared-configs/prettier':
+        specifier: workspace:*
+        version: link:../../configs/prettier
+      '@shared-configs/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@types/node':
+        specifier: ^22.20.4
+        version: 22.20.4
+      '@types/yargs':
+        specifier: ^17.0.35
+        version: 17.0.35
+      concurrently:
+        specifier: ^10.0.5
+        version: 10.0.5
+      eslint:
+        specifier: ^10.11.0
+        version: 10.11.0(jiti@2.7.0)(supports-color@10.2.2)
+      prettier:
+        specifier: ^3.9.9
+        version: 3.9.9
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
   tests/my-v1-addon:
     dependencies:
       '@babel/core':
@@ -1790,6 +1839,10 @@ packages:
 
   '@codemod-utils/ast-template@4.1.0':
     resolution: {integrity: sha512-hqxR4r8DS5QHMdcZ5K/kiXWADgPiuE7WYt3wN9Nx8B+YIFFiAPdpLHqIigmjOa3vhjWfm8G2o8UlsBXbikFDOg==}
+    engines: {node: 22.* || >= 24}
+
+  '@codemod-utils/blueprints@3.2.0':
+    resolution: {integrity: sha512-pdWttAX4w6qh9fk5vr+hJIJVaWoHwq3HiMuRKGbPBWJ0l0zby8o3F9WRRNq56hOgCLbfoS6XSd43sStHI7osXw==}
     engines: {node: 22.* || >= 24}
 
   '@codemod-utils/files@4.1.0':
@@ -10976,6 +11029,10 @@ snapshots:
   '@codemod-utils/ast-template@4.1.0':
     dependencies:
       '@glimmer/syntax': 0.95.0
+
+  '@codemod-utils/blueprints@3.2.0':
+    dependencies:
+      lodash: 4.18.1
 
   '@codemod-utils/files@4.1.0':
     dependencies:
