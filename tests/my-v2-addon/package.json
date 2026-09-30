@@ -79,7 +79,7 @@
     "@babel/runtime": "^8.0.5",
     "@ember-intl/lint": "^2.1.0",
     "@ember-intl/vite": "^2.0.4",
-    "@ember/test-helpers": "^5.5.0",
+    "@ember/test-helpers": "^5.5.2",
     "@ember/test-waiters": "^4.1.2",
     "@embroider/addon-dev": "^8.4.0",
     "@embroider/macros": "^1.21.1",
@@ -107,14 +107,14 @@
     "eslint": "^10.11.0",
     "postcss": "^8.5.28",
     "prettier": "^3.9.9",
-    "qunit": "^2.26.0",
+    "qunit": "^3.0.0",
     "qunit-dom": "^3.6.0",
     "rollup": "^4.63.5",
     "rollup-plugin-postcss": "^4.0.2",
     "stylelint": "^17.15.0",
     "type-css-modules": "^3.2.12",
     "typescript": "^6.0.3",
-    "vite": "^7.3.1"
+    "vite": "^8.3.1"
   },
   "peerDependencies": {
     "ember-intl": "^9.1.0"
