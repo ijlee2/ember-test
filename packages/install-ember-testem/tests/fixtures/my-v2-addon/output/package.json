@@ -12,9 +12,10 @@
   ],
   "scripts": {
     "build": "rollup --config",
+    "build:test": "NODE_ENV=development vite build --config vite.test.config.mts --mode development",
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
-    "test": "echo \"A v2 addon does not have tests\""
+    "test": "pnpm build:test && ember-test"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.10.3",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "concurrently": "^10.0.5",
     "ember-source": "~7.3.0",
+    "ember-testem": "^0.3.0",
     "rollup": "^4.63.5",
     "typescript": "^6.0.3"
   },
