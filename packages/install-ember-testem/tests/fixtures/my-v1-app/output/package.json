@@ -1,0 +1,19 @@
+{
+  "name": "my-v1-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "ember build --environment production",
+    "start": "ember serve",
+    "test": "ember b -e test && ember t --path dist --test-port 0"
+  },
+  "devDependencies": {
+    "@embroider/webpack": "^4.1.2",
+    "concurrently": "^10.0.5",
+    "ember-cli": "~6.12.0",
+    "ember-source": "~6.12.0"
+  },
+  "ember": {
+    "edition": "octane"
+  }
+}
