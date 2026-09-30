@@ -1,5 +1,5 @@
 import { loadTranslations } from '@ember-intl/vite';
-import { extensions, ember } from '@embroider/vite';
+import { ember, extensions } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
 import { defineConfig } from 'vite';
 
@@ -14,7 +14,6 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [
-    // @ts-expect-error: Incorrect type
     ember(),
     babel({
       babelHelpers: 'inline',
