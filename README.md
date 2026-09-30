@@ -8,6 +8,7 @@ _Backward- and forward-compatible testing for Ember projects_
 ## Package overview
 
 - [ember-testem](./packages/ember-testem/README.md)
+- [install-ember-testem](./packages/install-ember-testem/README.md)
 
 
 ## Compatibility

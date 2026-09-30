@@ -1,0 +1,60 @@
+{
+  "name": "install-ember-testem",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Codemod to install ember-testem",
+  "keywords": [
+    "codemod",
+    "ember-codemod",
+    "emberjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/ember-test.git",
+    "directory": "packages/ember-testem"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": "dist/bin/install-ember-testem.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "sh build.sh --production",
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" && pnpm format",
+    "lint:format": "prettier . --cache --check",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "tsc --noEmit",
+    "prepare": "pnpm build",
+    "release:prepare": "changeset version",
+    "release:publish": "pnpm build && changeset publish",
+    "test": "sh build.sh --test && mt dist-for-testing --quiet"
+  },
+  "dependencies": {
+    "@codemod-utils/ast-javascript": "^4.3.3",
+    "@codemod-utils/blueprints": "^3.2.0",
+    "@codemod-utils/files": "^4.1.0",
+    "@codemod-utils/package-json": "^4.1.2",
+    "yargs": "^18.2.0"
+  },
+  "devDependencies": {
+    "@codemod-utils/tests": "^3.3.0",
+    "@shared-configs/eslint-config-node": "workspace:*",
+    "@shared-configs/prettier": "workspace:*",
+    "@shared-configs/typescript": "workspace:*",
+    "@types/node": "^22.20.4",
+    "@types/yargs": "^17.0.35",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": "22.* || >= 24"
+  }
+}

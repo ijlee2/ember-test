@@ -1,15 +1,13 @@
 # compiled output
-/dist/
+dist/
 !tests/fixtures/my-project/**/dist/
-/dist-for-testing/
-/tmp/
+dist-for-testing/
+tmp/
 
 # dependencies
-/node_modules/
+node_modules/
 
 # misc
-/.DS_Store
-/.env*
-/.eslintcache
-/pnpm-debug.log*
-/pnpm-error.log*
+.DS_Store
+.env*
+.eslintcache
