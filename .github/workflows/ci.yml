@@ -34,9 +34,15 @@ jobs:
         run: pnpm lint
 
 
-  test-ember-testem:
-    name: Test (ember-testem)
+  test:
+    name: Test
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package-location:
+          - 'packages/ember-testem'
+          - 'packages/install-ember-testem'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -56,7 +62,7 @@ jobs:
 
       - name: Test
         run: pnpm test
-        working-directory: 'packages/ember-testem'
+        working-directory: ${{ matrix.package-location }}
 
 
   build-test-app-my-v1-addon:
