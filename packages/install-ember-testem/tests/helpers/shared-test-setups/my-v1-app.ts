@@ -5,6 +5,7 @@ const codemodOptions: CodemodOptions = {
 };
 
 const options: Options = {
+  packageType: 'v1-app',
   projectRoot: 'tmp/my-v1-app',
 };
 
