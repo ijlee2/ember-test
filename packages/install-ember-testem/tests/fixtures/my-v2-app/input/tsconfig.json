@@ -1,0 +1,19 @@
+{
+  "extends": "@ember/app-tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "my-v2-app/tests/*": ["./tests/*"],
+      "my-v2-app/*": ["./app/*"],
+      "*": ["./types/*"]
+    },
+    "rootDir": "..",
+    "types": [
+      "@embroider/core/virtual",
+      "@glint/ember-tsc/types",
+      "@types/qunit",
+      "ember-source/types",
+      "vite/client"
+    ]
+  },
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "vite.config.mts"]
+}

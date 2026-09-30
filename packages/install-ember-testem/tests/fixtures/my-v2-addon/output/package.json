@@ -1,0 +1,41 @@
+{
+  "name": "my-v2-addon",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "ember-addon"
+  ],
+  "files": [
+    "addon-main.cjs",
+    "declarations",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "build:test": "NODE_ENV=development vite build --config vite.test.config.mts --mode development",
+    "prepack": "rollup --config",
+    "start": "rollup --config --watch",
+    "test": "pnpm build:test && ember-test"
+  },
+  "dependencies": {
+    "@embroider/addon-shim": "^1.10.3",
+    "@glimmer/component": "^2.1.1",
+    "decorator-transforms": "^2.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "ember-source": "~7.3.0",
+    "ember-testem": "^0.3.0",
+    "rollup": "^4.63.5",
+    "typescript": "^6.0.3"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "app-js": {},
+    "main": "addon-main.cjs",
+    "type": "addon",
+    "version": 2
+  }
+}

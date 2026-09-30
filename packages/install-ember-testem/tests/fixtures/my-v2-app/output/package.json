@@ -1,0 +1,26 @@
+{
+  "name": "my-v2-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "build:test": "NODE_ENV=development vite build --config vite.test.config.mts --mode development",
+    "start": "vite",
+    "test": "pnpm build:test && ember-test --path dist-for-testing --port 0"
+  },
+  "devDependencies": {
+    "@embroider/vite": "^1.7.10",
+    "concurrently": "^10.0.5",
+    "ember-cli": "~7.3.0",
+    "ember-source": "~7.3.0",
+    "ember-testem": "^0.3.0",
+    "typescript": "^6.0.3"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "type": "app",
+    "version": 2
+  }
+}
