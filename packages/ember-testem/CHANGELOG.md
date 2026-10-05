@@ -1,5 +1,11 @@
 # ember-testem
 
+## 0.3.1
+
+### Patch Changes
+
+- [#14](https://github.com/ijlee2/ember-test/pull/14) Updated testem to 3.21.3 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.0
 
 ### Minor Changes

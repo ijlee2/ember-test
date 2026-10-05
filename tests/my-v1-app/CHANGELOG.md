@@ -1,5 +1,11 @@
 # my-v1-app
 
+## 0.2.2
+
+### Patch Changes
+
+- [#13](https://github.com/ijlee2/ember-test/pull/13) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.1
 
 ### Patch Changes
