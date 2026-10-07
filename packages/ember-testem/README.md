@@ -95,9 +95,9 @@ See [my-v1-app](../../tests/my-v1-app) for an example.
 
 <summary>V2 addons</summary>
 
-See [my-v2-addon](../../tests/my-v2-addon) for an example.
+In general, I recommend creating a test app as a separate package (using workspaces). This way, you can separate dependencies for source code and testing (avoid past issues with v1 addons). You would set up `ember-testem` by following the steps for v2 apps.
 
-For brevity, additional file changes aren't shown below. For example, you will need to split the Babel and TypeScript configurations into two files: one for production and another for testing.
+If you still want to create the test app in the same package, you will need to install and configure additional dependencies. See [my-v2-addon](../../tests/my-v2-addon) for an example.
 
 ```json
 {
@@ -108,32 +108,13 @@ For brevity, additional file changes aren't shown below. For example, you will n
 }
 ```
 
-```ts
-/* vite.test.config.mts */
-import { extensions, ember } from '@embroider/vite';
-import { babel } from '@rollup/plugin-babel';
-import { defineConfig } from 'vite';
+Files that need changes:
 
-export default defineConfig({
-  build: {
-    minify: false,
-    rollupOptions: {
-      input: {
-        tests: 'tests/index.html',
-      },
-    },
-    sourcemap: true,
-  },
-  plugins: [
-    ember(),
-    babel({
-      babelHelpers: 'inline',
-      extensions,
-      parallel: true,
-    }),
-  ],
-});
-```
+- Babel (`babel.config.mjs`, `babel.build.config.mjs`)
+- Dependencies (`package.json`)
+- Rollup (`rollup.config.mjs`)
+- TypeScript (`tsconfig.json`, `tsconfig.build.json`)
+- Vite (`vite.test.config.mts`)
 
 </details>
 
@@ -237,7 +218,7 @@ ember-test --port 0
 >
 > `ember-testem` provides a limited API on purpose.
 >
-> For `ember-cli` options like `--host`, `--launch`, `--reporter`, `--ssl`, `--ssl-cert`, `--ssl-key`, `--test-page`, `--testem-debug`), [configure `testem` in `testem.mjs` instead](https://github.com/ember-cli/ember-cli/blob/v7.3.0-ember-cli/lib/tasks/test.js#L54-L71).
+> For `ember-cli` options like `--host`, `--launch`, `--query`, `--reporter`, `--ssl`, `--ssl-cert`, `--ssl-key`, `--test-page`, `--testem-debug`), [configure `testem` in `testem.mjs` instead](https://github.com/ember-cli/ember-cli/blob/v7.3.0-ember-cli/lib/tasks/test.js#L54-L71).
 
 
 ## Compatibility
