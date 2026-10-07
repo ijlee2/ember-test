@@ -1,5 +1,11 @@
 # ember-testem
 
+## 0.3.2
+
+### Patch Changes
+
+- [#15](https://github.com/ijlee2/ember-test/pull/15) Provided more detailed instructions for v2 addons ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes
