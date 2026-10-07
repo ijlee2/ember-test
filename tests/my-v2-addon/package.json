@@ -81,9 +81,9 @@
     "@ember-intl/vite": "^2.0.4",
     "@ember/test-helpers": "^5.7.0",
     "@ember/test-waiters": "^4.1.2",
-    "@embroider/addon-dev": "^8.4.0",
-    "@embroider/macros": "^1.21.1",
-    "@embroider/vite": "^1.7.13",
+    "@embroider/addon-dev": "^8.4.2",
+    "@embroider/macros": "^1.21.3",
+    "@embroider/vite": "^1.7.15",
     "@glimmer/component": "^2.1.1",
     "@glimmer/tracking": "^1.1.2",
     "@glint/ember-tsc": "^1.11.6",
@@ -105,7 +105,7 @@
     "ember-strict-application-resolver": "^0.1.1",
     "ember-testem": "workspace:*",
     "eslint": "^10.12.0",
-    "postcss": "^8.5.28",
+    "postcss": "^8.5.29",
     "prettier": "^3.9.9",
     "qunit": "^3.0.0",
     "qunit-dom": "^3.6.0",
@@ -114,7 +114,7 @@
     "stylelint": "^17.16.0",
     "type-css-modules": "^3.2.12",
     "typescript": "^6.0.3",
-    "vite": "^8.3.2"
+    "vite": "^8.3.3"
   },
   "peerDependencies": {
     "ember-intl": "^9.1.0"
