@@ -465,7 +465,7 @@ importers:
         version: 10.0.5
       ember-a11y-testing:
         specifier: ^8.0.1
-        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2)
+        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2)
       ember-cli:
         specifier: ~6.12.0
         version: 6.12.0(@babel/core@7.29.7(supports-color@10.2.2))(@types/node@22.20.4)(debug@4.4.3(supports-color@10.2.2))(ejs@3.1.10)(handlebars@4.7.9)(supports-color@10.2.2)(underscore@1.13.8)
@@ -551,8 +551,8 @@ importers:
         specifier: ^0.1.3
         version: 0.1.3(supports-color@10.2.2)
       '@embroider/macros':
-        specifier: ^1.21.1
-        version: 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+        specifier: ^1.21.3
+        version: 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/router':
         specifier: ^2.1.12
         version: 2.1.12(@embroider/core@3.5.10(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -599,8 +599,8 @@ importers:
         specifier: ^22.0.0
         version: 22.0.0
       axe-core:
-        specifier: ^4.13.0
-        version: 4.13.0
+        specifier: ^4.14.0
+        version: 4.14.0
       broccoli-asset-rev:
         specifier: ^3.0.0
         version: 3.0.0(supports-color@10.2.2)
@@ -612,7 +612,7 @@ importers:
         version: 5.2.1(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       ember-a11y-testing:
         specifier: ^8.0.1
-        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2)
+        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2)
       ember-auto-import:
         specifier: ^2.13.1
         version: 2.13.1(@glint/template@1.9.0)(supports-color@10.2.2)(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3))
@@ -750,14 +750,14 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2(supports-color@10.2.2)
       '@embroider/addon-dev':
-        specifier: ^8.4.0
-        version: 8.4.0(@glint/template@1.9.0)(rollup@4.64.0)(supports-color@10.2.2)
+        specifier: ^8.4.2
+        version: 8.4.2(@glint/template@1.9.0)(rollup@4.64.0)(supports-color@10.2.2)
       '@embroider/macros':
-        specifier: ^1.21.1
-        version: 1.21.1(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)
+        specifier: ^1.21.3
+        version: 1.21.3(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/vite':
-        specifier: ^1.7.13
-        version: 1.7.13(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+        specifier: ^1.7.15
+        version: 1.7.15(@babel/core@8.0.6)(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       '@glimmer/component':
         specifier: ^2.1.1
         version: 2.1.1(supports-color@10.2.2)
@@ -802,7 +802,7 @@ importers:
         version: 10.0.5
       ember-a11y-testing:
         specifier: ^8.0.1
-        version: 8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2)
+        version: 8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2)
       ember-intl:
         specifier: ^9.1.0
         version: 9.1.0(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -822,8 +822,8 @@ importers:
         specifier: ^10.12.0
         version: 10.12.0(jiti@2.7.0)(supports-color@10.2.2)
       postcss:
-        specifier: ^8.5.28
-        version: 8.5.28
+        specifier: ^8.5.29
+        version: 8.5.29
       prettier:
         specifier: ^3.9.9
         version: 3.9.9
@@ -838,7 +838,7 @@ importers:
         version: 4.64.0
       rollup-plugin-postcss:
         specifier: ^4.0.2
-        version: 4.0.2(postcss@8.5.28)
+        version: 4.0.2(postcss@8.5.29)
       stylelint:
         specifier: ^17.16.0
         version: 17.16.0(supports-color@10.2.2)(typescript@6.0.3)
@@ -849,8 +849,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       vite:
-        specifier: ^8.3.2
-        version: 8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+        specifier: ^8.3.3
+        version: 8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
 
   tests/my-v2-app:
     devDependencies:
@@ -882,26 +882,26 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2(supports-color@10.2.2)
       '@embroider/compat':
-        specifier: ^4.1.25
-        version: 4.1.25(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+        specifier: ^4.1.27
+        version: 4.1.27(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/config-meta-loader':
         specifier: ^1.0.0
         version: 1.0.0
       '@embroider/core':
-        specifier: ^4.6.7
-        version: 4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)
+        specifier: ^4.6.9
+        version: 4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/legacy-inspector-support':
         specifier: ^0.1.3
         version: 0.1.3(supports-color@10.2.2)
       '@embroider/macros':
-        specifier: ^1.21.1
-        version: 1.21.1(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)
+        specifier: ^1.21.3
+        version: 1.21.3(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/router':
         specifier: ^3.0.6
-        version: 3.0.6(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
+        version: 3.0.6(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
       '@embroider/vite':
-        specifier: ^1.7.13
-        version: 1.7.13(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+        specifier: ^1.7.15
+        version: 1.7.15(@babel/core@8.0.6)(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       '@faker-js/faker':
         specifier: ^10.6.0
         version: 10.6.0
@@ -945,8 +945,8 @@ importers:
         specifier: ^22.0.0
         version: 22.0.0
       axe-core:
-        specifier: ^4.13.0
-        version: 4.13.0
+        specifier: ^4.14.0
+        version: 4.14.0
       babel-plugin-ember-template-compilation:
         specifier: ^4.0.0
         version: 4.0.0
@@ -961,7 +961,7 @@ importers:
         version: 5.2.1(@babel/core@8.0.6)(supports-color@10.2.2)
       ember-a11y-testing:
         specifier: ^8.0.1
-        version: 8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2)
+        version: 8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2)
       ember-auto-import:
         specifier: ^2.13.1
         version: 2.13.1(@glint/template@1.9.0)(supports-color@10.2.2)(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3))
@@ -1032,8 +1032,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       vite:
-        specifier: ^8.3.2
-        version: 8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+        specifier: ^8.3.3
+        version: 8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
 
 packages:
 
@@ -2002,8 +2002,8 @@ packages:
   '@ember/test-waiters@4.1.2':
     resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
 
-  '@embroider/addon-dev@8.4.0':
-    resolution: {integrity: sha512-cZbbxGtdLJ8W/h5vV1CsnN83UaY9p3qNnc/zQSyyUUJVXSiQp5OnezGRrnhpOeKcCnU/MhVUpRy2akFmz6iTwg==}
+  '@embroider/addon-dev@8.4.2':
+    resolution: {integrity: sha512-1fDiIrXenU3VxcWE7uu7YijLuzJOdFAguoVqZSgkxC/r0otg4bLHhNdgpsXI+6OxNcuFdjYuI/zTnSYZgu7xMQ==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
@@ -2029,11 +2029,11 @@ packages:
     peerDependencies:
       '@embroider/core': ^3.5.10
 
-  '@embroider/compat@4.1.25':
-    resolution: {integrity: sha512-wKm7+xLBKbxCfAwmDNltKC1WGy0wE3ecS1o0TpuLxTZtB/osR37frVqM53zhC+1HswrRLRzEIcG+AejvIrk7og==}
+  '@embroider/compat@4.1.27':
+    resolution: {integrity: sha512-DQIeaAmaWTg5cSqR92epQ+Z0cvsTwzjWc/VkDyficR/M23T57vz9MmeITwGMy55rAAt1EQyLWw9Q7+XYlLw79A==}
     engines: {node: '>= 20.19.*'}
     peerDependencies:
-      '@embroider/core': ^4.6.7
+      '@embroider/core': ^4.6.9
 
   '@embroider/config-meta-loader@1.0.0':
     resolution: {integrity: sha512-qznkdjgEGPe6NM94hZNXvOm/WhrJwBh8FtSQZ+nGjh9TOjY42tOiTEevFuM0onNXUn6bpdGzmjwKo2xY2jxQxQ==}
@@ -2043,8 +2043,8 @@ packages:
     resolution: {integrity: sha512-N5mZ7bxCMs8qTdeOZvCo4fXP3jX/wROF7ClAC0l/nwQdm/iS44v3DDHn/AKjJhGXWLmS/Aw6pNJaurz4RWt9cg==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/core@4.6.7':
-    resolution: {integrity: sha512-XapxW4txnaJq/PZmEa2GKLhhi7kt/byGXPPAyspsZwtRSmIKc3RKr8Bv+k0s7RyKrtKjUOBFySDK6M69MFJwJA==}
+  '@embroider/core@4.6.9':
+    resolution: {integrity: sha512-mI5yjBkKrJI7BzLW/si13ORIzDXJvxpGlm7NhAH6Fs2/TgJCDI+tF9X5lj9Ib0a1Lgj31glOVo5wmjT/HXzYRQ==}
     engines: {node: '>= 20.19.*'}
 
   '@embroider/hbs-loader@3.0.5':
@@ -2057,8 +2057,8 @@ packages:
   '@embroider/legacy-inspector-support@0.1.3':
     resolution: {integrity: sha512-0VzD1xExkT78a1CUiW8wZ5VZDL4bVyMSc3t8E/RiAW1X6TlyKIA/m6zoQgsQtQIiiTPPxH0/1Tdd0F7b5//etw==}
 
-  '@embroider/macros@1.21.1':
-    resolution: {integrity: sha512-57jR1QobqR3NKZX8bGi8ljONPfQdmQ01/LAzkwx/InGySyiC1HkvgPT4NdNWAFtK5Q00SYGYMQzJXZg3/zh9cQ==}
+  '@embroider/macros@1.21.3':
+    resolution: {integrity: sha512-2o5GOa95FeETwNa7hO5q87tXPiExJHeJA4x8kFGn/feOpyjphqWMo19McNZxF+RUVnFSwHgPlA7LObU/aT4htQ==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
       '@glint/template': ^1.0.0
@@ -2109,11 +2109,15 @@ packages:
       '@embroider/webpack':
         optional: true
 
-  '@embroider/vite@1.7.13':
-    resolution: {integrity: sha512-UNiPJ68N82kpdbRrkDtLmxyg/onvycgaUu3Kzvu6GXTX3OdQMMVAzDYpW4u6VOPzaWtrAHaFcCaYw46YbaDKfQ==}
+  '@embroider/vite@1.7.15':
+    resolution: {integrity: sha512-lxVYXiwsuhGmvXUcy42EAHes2gL7O7Kg/Cd661vuzfRd/WMMLDsjYgi15ueb16UXrw5lfi3MJMPTypOo1MZELQ==}
     peerDependencies:
-      '@embroider/core': ^4.6.7
+      '@babel/core': ^7.22.9 || ^8.0.0
+      '@embroider/core': ^4.6.9
       vite: '>= 5.2.0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
 
   '@embroider/webpack@4.1.2':
     resolution: {integrity: sha512-jMLRp3pw1OBYAcM1m+jEMbewowKWGX2s4TGfuDNVX81roCZWVbIxIvS4eQwoxL2j8MkuAnEjNbYMJonbl4VeMA==}
@@ -3895,8 +3899,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.13.0:
-    resolution: {integrity: sha512-UzGt8zg7Ny8djbYMhxl2zuEevVa7r2gJjYY5Lwr1xM7+XU2nd6CkIWFTVcCIbAP63vSz71NaVyyuSk9lHKcy0A==}
+  axe-core@4.14.0:
+    resolution: {integrity: sha512-9WTZxEjsZ7b13TH8JPmbV2z8CHbl80/2hm3XPEG4JgNdQLK81IBRXmSxHfMAOkSqQeRxT/0dwNDz2GOm3zzpcQ==}
     engines: {node: '>=4'}
 
   axobject-query@4.1.0:
@@ -7634,6 +7638,10 @@ packages:
     resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.5.29:
+    resolution: {integrity: sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==}
+    engines: {node: ^10 || ^12 || >=14}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -8227,8 +8235,8 @@ packages:
     engines: {node: '>=22'}
     hasBin: true
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   source-map-resolve@0.5.3:
@@ -8796,8 +8804,8 @@ packages:
     resolution: {integrity: sha512-zj/ob3UsvJGN0whEAKFp53REA5X66hvffVqoCtVQAakJKnKlH+/PcOfMoFwIG/o4rElqLv/ycAFlx8ZlXUorCg==}
     engines: {node: '>=18.12.0'}
 
-  vite@8.3.2:
-    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
+  vite@8.3.3:
+    resolution: {integrity: sha512-cTAldKPImjg6c+gk48U19POPn3GCBzZwpdsN8ZMEEcbpes+6/wvfqUd0C2y3qYY4wsj8PwgFwrZ/1jBPVttMSg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -11431,9 +11439,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/addon-dev@8.4.0(@glint/template@1.9.0)(rollup@4.64.0)(supports-color@10.2.2)':
+  '@embroider/addon-dev@8.4.2(@glint/template@1.9.0)(rollup@4.64.0)(supports-color@10.2.2)':
     dependencies:
-      '@embroider/core': 4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/core': 4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)
       '@rollup/pluginutils': 5.4.0(rollup@4.64.0)
       content-tag: 4.2.0
       execa: 5.1.1
@@ -11482,7 +11490,7 @@ snapshots:
       '@babel/runtime': 7.29.7
       '@babel/traverse': 7.29.8(supports-color@10.2.2)
       '@embroider/core': 3.5.10(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@types/babel__code-frame': 7.27.0
       '@types/yargs': 17.0.35
       assert-never: 1.4.0
@@ -11523,7 +11531,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/compat@4.1.25(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@embroider/compat@4.1.27(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@babel/code-frame': 7.29.7
       '@babel/core': 7.29.7(supports-color@10.2.2)
@@ -11534,8 +11542,8 @@ snapshots:
       '@babel/preset-env': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/runtime': 7.29.7
       '@babel/traverse': 7.29.8(supports-color@10.2.2)
-      '@embroider/core': 4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/core': 4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@types/babel__code-frame': 7.27.0
       assert-never: 1.4.0
       babel-import-util: 3.0.1
@@ -11583,7 +11591,7 @@ snapshots:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/parser': 7.29.9
       '@babel/traverse': 7.29.8(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/shared-internals': 2.9.2(supports-color@10.2.2)
       assert-never: 1.4.0
       babel-plugin-ember-template-compilation: 2.4.1
@@ -11612,12 +11620,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/parser': 7.29.9
       '@babel/traverse': 7.29.8(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/reverse-exports': 0.2.0
       '@embroider/shared-internals': 3.2.0(supports-color@10.2.2)
       assert-never: 1.4.0
@@ -11659,7 +11667,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/macros@1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@embroider/macros@1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@embroider/shared-internals': 3.2.0(supports-color@10.2.2)
       assert-never: 1.4.0
@@ -11675,7 +11683,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  '@embroider/macros@1.21.1(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@embroider/macros@1.21.3(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@embroider/shared-internals': 3.2.0(supports-color@10.2.2)
       assert-never: 1.4.0
@@ -11705,12 +11713,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/router@3.0.6(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)':
+  '@embroider/router@3.0.6(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
       '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
     optionalDependencies:
-      '@embroider/core': 4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/core': 4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -11775,11 +11783,10 @@ snapshots:
       '@embroider/core': 3.5.10(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/webpack': 4.1.2(@embroider/core@3.5.10(@glint/template@1.9.0)(supports-color@10.2.2))(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3))
 
-  '@embroider/vite@1.7.13(@embroider/core@4.6.7(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
+  '@embroider/vite@1.7.15(@babel/core@8.0.6)(@embroider/core@4.6.9(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)(vite@8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@embroider/core': 4.6.7(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/core': 4.6.9(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@8.0.6)(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/reverse-exports': 0.2.0
       assert-never: 1.4.0
       browserslist: 4.29.2
@@ -11793,7 +11800,9 @@ snapshots:
       send: 1.2.1(supports-color@10.2.2)
       source-map-url: 0.4.1
       terser: 5.51.2
-      vite: 8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+      vite: 8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+    optionalDependencies:
+      '@babel/core': 8.0.6
     transitivePeerDependencies:
       - '@glint/template'
       - bufferutil
@@ -13540,7 +13549,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axe-core@4.13.0: {}
+  axe-core@4.14.0: {}
 
   axobject-query@4.1.0: {}
 
@@ -14572,18 +14581,23 @@ snapshots:
   css-declaration-sorter@6.4.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  css-declaration-sorter@6.4.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   css-functions-list@3.3.3: {}
 
   css-loader@5.2.7(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3)):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.28)
+      icss-utils: 5.1.0(postcss@8.5.29)
       loader-utils: 2.0.4
-      postcss: 8.5.28
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.28)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.28)
-      postcss-modules-scope: 3.2.1(postcss@8.5.28)
-      postcss-modules-values: 4.0.0(postcss@8.5.28)
+      postcss: 8.5.29
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.29)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.29)
+      postcss-modules-scope: 3.2.1(postcss@8.5.29)
+      postcss-modules-values: 4.0.0(postcss@8.5.29)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
       semver: 7.8.5
@@ -14607,7 +14621,7 @@ snapshots:
   css-tree@3.2.1:
     dependencies:
       mdn-data: 2.27.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-what@6.2.2: {}
 
@@ -14645,16 +14659,63 @@ snapshots:
       postcss-reduce-transforms: 5.1.0(postcss@8.5.28)
       postcss-svgo: 5.1.0(postcss@8.5.28)
       postcss-unique-selectors: 5.1.1(postcss@8.5.28)
+    optional: true
+
+  cssnano-preset-default@5.2.14(postcss@8.5.29):
+    dependencies:
+      css-declaration-sorter: 6.4.1(postcss@8.5.29)
+      cssnano-utils: 3.1.0(postcss@8.5.29)
+      postcss: 8.5.29
+      postcss-calc: 8.2.4(postcss@8.5.29)
+      postcss-colormin: 5.3.1(postcss@8.5.29)
+      postcss-convert-values: 5.1.3(postcss@8.5.29)
+      postcss-discard-comments: 5.1.2(postcss@8.5.29)
+      postcss-discard-duplicates: 5.1.0(postcss@8.5.29)
+      postcss-discard-empty: 5.1.1(postcss@8.5.29)
+      postcss-discard-overridden: 5.1.0(postcss@8.5.29)
+      postcss-merge-longhand: 5.1.7(postcss@8.5.29)
+      postcss-merge-rules: 5.1.4(postcss@8.5.29)
+      postcss-minify-font-values: 5.1.0(postcss@8.5.29)
+      postcss-minify-gradients: 5.1.1(postcss@8.5.29)
+      postcss-minify-params: 5.1.4(postcss@8.5.29)
+      postcss-minify-selectors: 5.2.1(postcss@8.5.29)
+      postcss-normalize-charset: 5.1.0(postcss@8.5.29)
+      postcss-normalize-display-values: 5.1.0(postcss@8.5.29)
+      postcss-normalize-positions: 5.1.1(postcss@8.5.29)
+      postcss-normalize-repeat-style: 5.1.1(postcss@8.5.29)
+      postcss-normalize-string: 5.1.0(postcss@8.5.29)
+      postcss-normalize-timing-functions: 5.1.0(postcss@8.5.29)
+      postcss-normalize-unicode: 5.1.1(postcss@8.5.29)
+      postcss-normalize-url: 5.1.0(postcss@8.5.29)
+      postcss-normalize-whitespace: 5.1.1(postcss@8.5.29)
+      postcss-ordered-values: 5.1.3(postcss@8.5.29)
+      postcss-reduce-initial: 5.1.2(postcss@8.5.29)
+      postcss-reduce-transforms: 5.1.0(postcss@8.5.29)
+      postcss-svgo: 5.1.0(postcss@8.5.29)
+      postcss-unique-selectors: 5.1.1(postcss@8.5.29)
 
   cssnano-utils@3.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  cssnano-utils@3.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   cssnano@5.1.15(postcss@8.5.28):
     dependencies:
       cssnano-preset-default: 5.2.14(postcss@8.5.28)
       lilconfig: 2.1.0
       postcss: 8.5.28
+      yaml: 1.10.3
+    optional: true
+
+  cssnano@5.1.15(postcss@8.5.29):
+    dependencies:
+      cssnano-preset-default: 5.2.14(postcss@8.5.29)
+      lilconfig: 2.1.0
+      postcss: 8.5.29
       yaml: 1.10.3
 
   csso@4.2.0:
@@ -14891,12 +14952,12 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-a11y-testing@8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2):
+  ember-a11y-testing@8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2):
     dependencies:
       '@ember/test-helpers': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
-      axe-core: 4.13.0
+      axe-core: 4.14.0
       decorator-transforms: 2.4.0(@babel/core@7.29.7(supports-color@10.2.2))
     optionalDependencies:
       qunit: 3.0.0
@@ -14904,12 +14965,12 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-a11y-testing@8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.13.0)(qunit@3.0.0)(supports-color@10.2.2):
+  ember-a11y-testing@8.0.1(@babel/core@8.0.6)(@ember/test-helpers@5.7.0(@babel/core@8.0.6)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.14.0)(qunit@3.0.0)(supports-color@10.2.2):
     dependencies:
       '@ember/test-helpers': 5.7.0(@babel/core@8.0.6)(supports-color@10.2.2)
       '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
-      axe-core: 4.13.0
+      axe-core: 4.14.0
       decorator-transforms: 2.4.0(@babel/core@8.0.6)
     optionalDependencies:
       qunit: 3.0.0
@@ -14925,7 +14986,7 @@ snapshots:
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/plugin-transform-class-static-block': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/preset-env': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@embroider/reverse-exports': 0.2.0
       '@embroider/shared-internals': 2.9.2(supports-color@10.2.2)
       babel-loader: 8.4.1(@babel/core@7.29.7(supports-color@10.2.2))(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3))
@@ -15103,7 +15164,7 @@ snapshots:
   ember-cli-mirage@3.0.4(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@glint/template@1.9.0)(ember-qunit@9.2.0(@ember/test-helpers@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@3.0.0)(supports-color@10.2.2))(ember-source@6.12.0(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(miragejs@0.1.48)(supports-color@10.2.2)(webpack@5.111.1(cssnano@5.1.15(postcss@8.5.28))(csso@4.2.0)(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@2.8.4)(uglify-js@3.19.3)):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       broccoli-file-creator: 2.1.1
       broccoli-funnel: 3.0.8(supports-color@10.2.2)
       broccoli-merge-trees: 4.2.0(supports-color@10.2.2)
@@ -15541,7 +15602,7 @@ snapshots:
 
   ember-get-config@2.1.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2):
     dependencies:
-      '@embroider/macros': 1.21.1(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       ember-cli-babel: 7.26.11(supports-color@10.2.2)
     transitivePeerDependencies:
       - '@babel/core'
@@ -17033,9 +17094,9 @@ snapshots:
 
   icss-replace-symbols@1.1.0: {}
 
-  icss-utils@5.1.0(postcss@8.5.28):
+  icss-utils@5.1.0(postcss@8.5.29):
     dependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
 
   ignore@5.3.2: {}
 
@@ -18248,6 +18309,13 @@ snapshots:
       postcss: 8.5.28
       postcss-selector-parser: 6.1.4
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-calc@8.2.4(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+      postcss-selector-parser: 6.1.4
+      postcss-value-parser: 4.2.0
 
   postcss-colormin@5.3.1(postcss@8.5.28):
     dependencies:
@@ -18256,41 +18324,84 @@ snapshots:
       colord: 2.10.0
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-colormin@5.3.1(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      caniuse-api: 3.0.0
+      colord: 2.10.0
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-convert-values@5.1.3(postcss@8.5.28):
     dependencies:
       browserslist: 4.29.2
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-convert-values@5.1.3(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-discard-comments@5.1.2(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  postcss-discard-comments@5.1.2(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   postcss-discard-duplicates@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  postcss-discard-duplicates@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   postcss-discard-empty@5.1.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  postcss-discard-empty@5.1.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   postcss-discard-overridden@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
 
-  postcss-load-config@3.1.4(postcss@8.5.28):
+  postcss-discard-overridden@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+
+  postcss-load-config@3.1.4(postcss@8.5.29):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.3
     optionalDependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
 
   postcss-merge-longhand@5.1.7(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
       stylehacks: 5.1.1(postcss@8.5.28)
+    optional: true
+
+  postcss-merge-longhand@5.1.7(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
+      stylehacks: 5.1.1(postcss@8.5.29)
 
   postcss-merge-rules@5.1.4(postcss@8.5.28):
     dependencies:
@@ -18299,10 +18410,25 @@ snapshots:
       cssnano-utils: 3.1.0(postcss@8.5.28)
       postcss: 8.5.28
       postcss-selector-parser: 6.1.4
+    optional: true
+
+  postcss-merge-rules@5.1.4(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      caniuse-api: 3.0.0
+      cssnano-utils: 3.1.0(postcss@8.5.29)
+      postcss: 8.5.29
+      postcss-selector-parser: 6.1.4
 
   postcss-minify-font-values@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-minify-font-values@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-value-parser: 4.2.0
 
   postcss-minify-gradients@5.1.1(postcss@8.5.28):
@@ -18311,6 +18437,14 @@ snapshots:
       cssnano-utils: 3.1.0(postcss@8.5.28)
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-minify-gradients@5.1.1(postcss@8.5.29):
+    dependencies:
+      colord: 2.10.0
+      cssnano-utils: 3.1.0(postcss@8.5.29)
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-minify-params@5.1.4(postcss@8.5.28):
     dependencies:
@@ -18318,72 +18452,121 @@ snapshots:
       cssnano-utils: 3.1.0(postcss@8.5.28)
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-minify-params@5.1.4(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      cssnano-utils: 3.1.0(postcss@8.5.29)
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-minify-selectors@5.2.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-selector-parser: 6.1.4
+    optional: true
 
-  postcss-modules-extract-imports@3.1.0(postcss@8.5.28):
+  postcss-minify-selectors@5.2.1(postcss@8.5.29):
     dependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
+      postcss-selector-parser: 6.1.4
 
-  postcss-modules-local-by-default@4.2.0(postcss@8.5.28):
+  postcss-modules-extract-imports@3.1.0(postcss@8.5.29):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.28)
-      postcss: 8.5.28
+      postcss: 8.5.29
+
+  postcss-modules-local-by-default@4.2.0(postcss@8.5.29):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.5.29)
+      postcss: 8.5.29
       postcss-selector-parser: 7.1.6
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.1(postcss@8.5.28):
+  postcss-modules-scope@3.2.1(postcss@8.5.29):
     dependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
       postcss-selector-parser: 7.1.6
 
-  postcss-modules-values@4.0.0(postcss@8.5.28):
+  postcss-modules-values@4.0.0(postcss@8.5.29):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.28)
-      postcss: 8.5.28
+      icss-utils: 5.1.0(postcss@8.5.29)
+      postcss: 8.5.29
 
-  postcss-modules@4.3.1(postcss@8.5.28):
+  postcss-modules@4.3.1(postcss@8.5.29):
     dependencies:
       generic-names: 4.0.0
       icss-replace-symbols: 1.1.0
       lodash.camelcase: 4.3.0
-      postcss: 8.5.28
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.28)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.28)
-      postcss-modules-scope: 3.2.1(postcss@8.5.28)
-      postcss-modules-values: 4.0.0(postcss@8.5.28)
+      postcss: 8.5.29
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.29)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.29)
+      postcss-modules-scope: 3.2.1(postcss@8.5.29)
+      postcss-modules-values: 4.0.0(postcss@8.5.29)
       string-hash: 1.1.3
 
   postcss-normalize-charset@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+    optional: true
+
+  postcss-normalize-charset@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   postcss-normalize-display-values@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-display-values@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-value-parser: 4.2.0
 
   postcss-normalize-positions@5.1.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-positions@5.1.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-normalize-repeat-style@5.1.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-repeat-style@5.1.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-value-parser: 4.2.0
 
   postcss-normalize-string@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-string@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-normalize-timing-functions@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-timing-functions@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-value-parser: 4.2.0
 
   postcss-normalize-unicode@5.1.1(postcss@8.5.28):
@@ -18391,16 +18574,36 @@ snapshots:
       browserslist: 4.29.2
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-unicode@5.1.1(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-normalize-url@5.1.0(postcss@8.5.28):
     dependencies:
       normalize-url: 6.1.0
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-url@5.1.0(postcss@8.5.29):
+    dependencies:
+      normalize-url: 6.1.0
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-normalize-whitespace@5.1.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-normalize-whitespace@5.1.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-value-parser: 4.2.0
 
   postcss-ordered-values@5.1.3(postcss@8.5.28):
@@ -18408,21 +18611,41 @@ snapshots:
       cssnano-utils: 3.1.0(postcss@8.5.28)
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
+
+  postcss-ordered-values@5.1.3(postcss@8.5.29):
+    dependencies:
+      cssnano-utils: 3.1.0(postcss@8.5.29)
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
 
   postcss-reduce-initial@5.1.2(postcss@8.5.28):
     dependencies:
       browserslist: 4.29.2
       caniuse-api: 3.0.0
       postcss: 8.5.28
+    optional: true
+
+  postcss-reduce-initial@5.1.2(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      caniuse-api: 3.0.0
+      postcss: 8.5.29
 
   postcss-reduce-transforms@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
+    optional: true
 
-  postcss-safe-parser@7.1.0(postcss@8.5.28):
+  postcss-reduce-transforms@5.1.0(postcss@8.5.29):
     dependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
+
+  postcss-safe-parser@7.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
 
   postcss-selector-parser@6.1.4:
     dependencies:
@@ -18434,19 +18657,32 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@10.0.0(postcss@8.5.28):
+  postcss-sorting@10.0.0(postcss@8.5.29):
     dependencies:
-      postcss: 8.5.28
+      postcss: 8.5.29
 
   postcss-svgo@5.1.0(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
       svgo: 2.8.4
+    optional: true
+
+  postcss-svgo@5.1.0(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
+      postcss-value-parser: 4.2.0
+      svgo: 2.8.4
 
   postcss-unique-selectors@5.1.1(postcss@8.5.28):
     dependencies:
       postcss: 8.5.28
+      postcss-selector-parser: 6.1.4
+    optional: true
+
+  postcss-unique-selectors@5.1.1(postcss@8.5.29):
+    dependencies:
+      postcss: 8.5.29
       postcss-selector-parser: 6.1.4
 
   postcss-value-parser@4.2.0: {}
@@ -18455,7 +18691,14 @@ snapshots:
     dependencies:
       nanoid: 3.3.19
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
+    optional: true
+
+  postcss@8.5.29:
+    dependencies:
+      nanoid: 3.3.19
+      picocolors: 1.1.1
+      source-map-js: 1.2.2
 
   prelude-ls@1.2.1: {}
 
@@ -18788,17 +19031,17 @@ snapshots:
       fs-extra: 7.0.1
       rollup: 4.64.0
 
-  rollup-plugin-postcss@4.0.2(postcss@8.5.28):
+  rollup-plugin-postcss@4.0.2(postcss@8.5.29):
     dependencies:
       chalk: 4.1.2
       concat-with-sourcemaps: 1.1.0
-      cssnano: 5.1.15(postcss@8.5.28)
+      cssnano: 5.1.15(postcss@8.5.29)
       import-cwd: 3.0.0
       p-queue: 6.6.2
       pify: 5.0.0
-      postcss: 8.5.28
-      postcss-load-config: 3.1.4(postcss@8.5.28)
-      postcss-modules: 4.3.1(postcss@8.5.28)
+      postcss: 8.5.29
+      postcss-load-config: 3.1.4(postcss@8.5.29)
+      postcss-modules: 4.3.1(postcss@8.5.29)
       promise.series: 0.2.0
       resolve: 1.22.12
       rollup-pluginutils: 2.8.2
@@ -19244,7 +19487,7 @@ snapshots:
       sort-object-keys: 2.1.0
       tinyglobby: 0.2.17
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   source-map-resolve@0.5.3:
     dependencies:
@@ -19420,6 +19663,13 @@ snapshots:
       browserslist: 4.29.2
       postcss: 8.5.28
       postcss-selector-parser: 6.1.4
+    optional: true
+
+  stylehacks@5.1.1(postcss@8.5.29):
+    dependencies:
+      browserslist: 4.29.2
+      postcss: 8.5.29
+      postcss-selector-parser: 6.1.4
 
   stylelint-config-recommended@18.0.0(stylelint@17.16.0(typescript@6.0.3)):
     dependencies:
@@ -19432,8 +19682,8 @@ snapshots:
 
   stylelint-order@8.1.1(stylelint@17.16.0(typescript@6.0.3)):
     dependencies:
-      postcss: 8.5.28
-      postcss-sorting: 10.0.0(postcss@8.5.28)
+      postcss: 8.5.29
+      postcss-sorting: 10.0.0(postcss@8.5.29)
       stylelint: 17.16.0(supports-color@10.2.2)(typescript@6.0.3)
 
   stylelint@17.16.0(supports-color@10.2.2)(typescript@6.0.3):
@@ -19464,8 +19714,8 @@ snapshots:
       micromatch: 4.0.8
       normalize-path: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.5.28
-      postcss-safe-parser: 7.1.0(postcss@8.5.28)
+      postcss: 8.5.29
+      postcss-safe-parser: 7.1.0(postcss@8.5.29)
       postcss-selector-parser: 7.1.6
       postcss-value-parser: 4.2.0
       string-width: 8.3.0
@@ -19887,7 +20137,7 @@ snapshots:
     dependencies:
       '@codemod-utils/files': 4.1.0
       css-selector-parser: 3.3.0
-      postcss: 8.5.28
+      postcss: 8.5.29
       yargs: 18.2.0
 
   type-detect@4.0.8: {}
@@ -20074,11 +20324,11 @@ snapshots:
 
   verkit@0.3.2: {}
 
-  vite@8.3.2(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1):
+  vite@8.3.3(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
-      postcss: 8.5.28
+      postcss: 8.5.29
       rolldown: 1.2.11
       tinyglobby: 0.2.17
     optionalDependencies:
