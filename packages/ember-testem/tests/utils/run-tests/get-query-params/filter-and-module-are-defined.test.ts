@@ -4,8 +4,10 @@ import { getQueryParams } from '../../../../src/utils/run-tests/get-query-params
 
 test('utils | run-tests | get-query-params > filter and module are defined', function () {
   const queryParams = getQueryParams({
-    filter: 'we can pass',
-    module: 'Integration | Component | ui/form/input',
+    qunit: {
+      filter: 'we can pass',
+      testModule: 'Integration | Component | ui/form/input',
+    },
   });
 
   assert.strictEqual(

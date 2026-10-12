@@ -7,7 +7,7 @@ import type { Options } from '../../types/index.js';
 import { getQueryParams } from '../../utils/run-tests/get-query-params.js';
 
 export async function runTestsInDev(options: Options): Promise<void> {
-  const { buildPath, filters, port, projectRoot } = options;
+  const { buildPath, port, projectRoot } = options;
 
   const testemInstance = new Testem();
 
@@ -20,7 +20,7 @@ export async function runTestsInDev(options: Options): Promise<void> {
     ...startOptions,
     config_dir: projectRoot,
     cwd: join(projectRoot, buildPath),
-    query_params: getQueryParams(filters),
+    query_params: getQueryParams(options),
   });
 
   const watcher = watch([buildPath], {
