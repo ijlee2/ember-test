@@ -1,14 +1,15 @@
 import type { Options } from '../../types/index.js';
 
-export function getQueryParams(filters: Options['filters']): string {
+export function getQueryParams(qunit: Options['qunit']): string {
+  const { filter, testModule } = qunit;
   const params: string[] = [];
 
-  if (filters.module) {
-    params.push(`module=${filters.module}`);
+  if (testModule) {
+    params.push(`module=${testModule}`);
   }
 
-  if (filters.filter) {
-    params.push(`filter=${filters.filter}`);
+  if (filter) {
+    params.push(`filter=${filter}`);
   }
 
   return params.join('&');

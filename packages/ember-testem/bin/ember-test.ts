@@ -51,12 +51,12 @@ const argv = yargs(hideBin(process.argv))
 
 const codemodOptions: CodemodOptions = {
   buildPath: argv['path'],
-  filters: {
-    filter: argv['filter'],
-    module: argv['module'],
-  },
   port: argv['test-port'] ?? argv['port'],
   projectRoot: argv['root'] ?? process.cwd(),
+  qunit: {
+    filter: argv['filter'],
+    testModule: argv['module'],
+  },
   server: argv['server'],
 };
 

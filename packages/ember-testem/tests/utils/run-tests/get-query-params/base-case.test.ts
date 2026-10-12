@@ -5,7 +5,7 @@ import { getQueryParams } from '../../../../src/utils/run-tests/get-query-params
 test('utils | run-tests | get-query-params > base case', function () {
   const queryParams = getQueryParams({
     filter: undefined,
-    module: undefined,
+    testModule: undefined,
   });
 
   assert.strictEqual(queryParams, '');

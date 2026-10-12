@@ -5,7 +5,7 @@ import { getQueryParams } from '../../../../src/utils/run-tests/get-query-params
 test('utils | run-tests | get-query-params > filter is defined', function () {
   const queryParams = getQueryParams({
     filter: 'Integration |',
-    module: undefined,
+    testModule: undefined,
   });
 
   assert.strictEqual(queryParams, 'filter=Integration |');

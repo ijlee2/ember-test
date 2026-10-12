@@ -1,23 +1,23 @@
 type CodemodOptions = {
   buildPath: string;
-  filters: {
-    filter: string | undefined;
-    module: string | undefined;
-  };
   port: number | undefined;
   projectRoot: string;
+  qunit: {
+    filter: string | undefined;
+    testModule: string | undefined;
+  };
   server: boolean | undefined;
 };
 
 type Options = {
   buildPath: string;
-  filters: {
-    filter: string | undefined;
-    module: string | undefined;
-  };
   launchBrowser: boolean;
   port: number | undefined;
   projectRoot: string;
+  qunit: {
+    filter: string | undefined;
+    testModule: string | undefined;
+  };
 };
 
 export type { CodemodOptions, Options };

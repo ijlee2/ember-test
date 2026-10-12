@@ -5,7 +5,7 @@ import { getQueryParams } from '../../../../src/utils/run-tests/get-query-params
 test('utils | run-tests | get-query-params > module is defined', function () {
   const queryParams = getQueryParams({
     filter: undefined,
-    module: 'Acceptance | index',
+    testModule: 'Acceptance | index',
   });
 
   assert.strictEqual(queryParams, 'module=Acceptance | index');
