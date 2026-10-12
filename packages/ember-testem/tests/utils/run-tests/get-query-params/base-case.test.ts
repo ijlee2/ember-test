@@ -4,8 +4,10 @@ import { getQueryParams } from '../../../../src/utils/run-tests/get-query-params
 
 test('utils | run-tests | get-query-params > base case', function () {
   const queryParams = getQueryParams({
-    filter: undefined,
-    testModule: undefined,
+    qunit: {
+      filter: undefined,
+      testModule: undefined,
+    },
   });
 
   assert.strictEqual(queryParams, '');

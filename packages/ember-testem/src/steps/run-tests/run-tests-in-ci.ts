@@ -6,7 +6,7 @@ import type { Options } from '../../types/index.js';
 import { getQueryParams } from '../../utils/run-tests/get-query-params.js';
 
 export async function runTestsInCI(options: Options): Promise<void> {
-  const { buildPath, port, projectRoot, qunit } = options;
+  const { buildPath, port, projectRoot } = options;
 
   const testemInstance = new Testem();
 
@@ -20,7 +20,7 @@ export async function runTestsInCI(options: Options): Promise<void> {
     config_dir: projectRoot,
     cwd: join(projectRoot, buildPath),
     parallel: 1,
-    query_params: getQueryParams(qunit),
+    query_params: getQueryParams(options),
   });
 
   return new Promise((resolve, reject) => {
