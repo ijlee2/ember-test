@@ -1,5 +1,11 @@
 # my-v2-addon
 
+## 0.2.4
+
+### Patch Changes
+
+- [#19](https://github.com/ijlee2/ember-test/pull/19) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.3
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # ember-testem
 
+## 0.3.3
+
+### Patch Changes
+
+- [#18](https://github.com/ijlee2/ember-test/pull/18) Introduced trusted publishing ([@ijlee2](https://github.com/ijlee2))
+- [#17](https://github.com/ijlee2/ember-test/pull/17) Generalized getQueryParams ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.2
 
 ### Patch Changes
