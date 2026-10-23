@@ -62,8 +62,6 @@
     "test": "pnpm build:test && pnpm test:ember-testem",
     "test:ember-cli": "echo \"A v2 addon does not have tests, run tests in my-v2-app\"",
     "test:ember-testem": "ember-test --path dist-for-testing --port 0",
-    "test:ember-testem:filter-by-filter": "ember-test --filter \"!it renders\" --path dist-for-testing --port 0",
-    "test:ember-testem:filter-by-module": "ember-test --module \"Integration | Component | ui/form/input\" --path dist-for-testing --port 0",
     "test:watch": "concurrently \"pnpm build:test --watch\" \"pnpm test:ember-testem --server\" --names build,test"
   },
   "dependencies": {

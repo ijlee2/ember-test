@@ -106,8 +106,8 @@ jobs:
         test-scenario:
           - 'ember-cli'
           - 'ember-testem'
-          - 'ember-testem:filter-by-filter'
-          - 'ember-testem:filter-by-module'
+          - 'ember-testem-filter-by-filter'
+          - 'ember-testem-filter-by-module'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -132,8 +132,8 @@ jobs:
           path: 'tests/my-v1-addon/dist'
 
       - name: Test
-        run: pnpm test:${{ matrix.test-scenario }}
-        working-directory: 'tests/my-v1-addon'
+        run: node tests/my-v1-addon/${{ matrix.test-scenario }}.test.ts
+        working-directory: 'tests/e2e'
 
 
   build-test-app-my-v1-app:
@@ -177,8 +177,8 @@ jobs:
         test-scenario:
           - 'ember-cli'
           - 'ember-testem'
-          - 'ember-testem:filter-by-filter'
-          - 'ember-testem:filter-by-module'
+          - 'ember-testem-filter-by-filter'
+          - 'ember-testem-filter-by-module'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -203,8 +203,8 @@ jobs:
           path: 'tests/my-v1-app/dist'
 
       - name: Test
-        run: pnpm test:${{ matrix.test-scenario }}
-        working-directory: 'tests/my-v1-app'
+        run: node tests/my-v1-app/${{ matrix.test-scenario }}.test.ts
+        working-directory: 'tests/e2e'
 
 
   build-test-app-my-v2-addon:
@@ -248,8 +248,8 @@ jobs:
         test-scenario:
           - 'ember-cli'
           - 'ember-testem'
-          - 'ember-testem:filter-by-filter'
-          - 'ember-testem:filter-by-module'
+          - 'ember-testem-filter-by-filter'
+          - 'ember-testem-filter-by-module'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -274,8 +274,8 @@ jobs:
           path: 'tests/my-v2-addon/dist-for-testing'
 
       - name: Test
-        run: pnpm test:${{ matrix.test-scenario }}
-        working-directory: 'tests/my-v2-addon'
+        run: node tests/my-v2-addon/${{ matrix.test-scenario }}.test.ts
+        working-directory: 'tests/e2e'
 
 
   build-test-app-my-v2-app:
@@ -319,8 +319,8 @@ jobs:
         test-scenario:
           - 'ember-cli'
           - 'ember-testem'
-          - 'ember-testem:filter-by-filter'
-          - 'ember-testem:filter-by-module'
+          - 'ember-testem-filter-by-filter'
+          - 'ember-testem-filter-by-module'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -345,5 +345,5 @@ jobs:
           path: 'tests/my-v2-app/dist'
 
       - name: Test
-        run: pnpm test:${{ matrix.test-scenario }}
-        working-directory: 'tests/my-v2-app'
+        run: node tests/my-v2-app/${{ matrix.test-scenario }}.test.ts
+        working-directory: 'tests/e2e'

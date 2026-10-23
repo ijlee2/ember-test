@@ -386,6 +386,33 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  tests/e2e:
+    devDependencies:
+      '@shared-configs/eslint-config-node':
+        specifier: workspace:*
+        version: link:../../configs/eslint/node
+      '@shared-configs/prettier':
+        specifier: workspace:*
+        version: link:../../configs/prettier
+      '@shared-configs/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@types/node':
+        specifier: ^22.20.5
+        version: 22.20.5
+      concurrently:
+        specifier: ^10.0.6
+        version: 10.0.6
+      eslint:
+        specifier: ^10.13.0
+        version: 10.13.0(jiti@2.7.0)(supports-color@10.2.2)
+      prettier:
+        specifier: ^3.9.10
+        version: 3.9.10
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
   tests/my-v1-addon:
     dependencies:
       '@babel/core':
