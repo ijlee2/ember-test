@@ -33,8 +33,6 @@
     "test": "pnpm build:test && pnpm test:ember-testem",
     "test:ember-cli": "ember test --path dist --test-port 0",
     "test:ember-testem": "ember-test --port 0",
-    "test:ember-testem:filter-by-filter": "ember-test --filter \"!acceptance\" --port 0",
-    "test:ember-testem:filter-by-module": "ember-test --module \"Acceptance | products\" --port 0",
     "test:watch": "concurrently \"pnpm build:test --watch\" \"pnpm test:ember-testem --server\" --names build,test"
   },
   "devDependencies": {
