@@ -1,11 +1,11 @@
-import { Reporter } from './reporter.mjs';
+import { Reporter } from './reporter.ts';
 
 export default {
   browser_args: {
     Chrome: {
       ci: [
         // --no-sandbox is needed when running Chrome inside a container
-        process.env.CI ? '--no-sandbox' : null,
+        process.env['CI'] ? '--no-sandbox' : null,
         '--headless',
         '--disable-dev-shm-usage',
         '--disable-software-rasterizer',
@@ -19,6 +19,6 @@ export default {
   disable_watching: true,
   launch_in_ci: ['Chrome'],
   launch_in_dev: ['Chrome'],
-  reporter: process.env.e2e ? Reporter : undefined,
+  reporter: process.env['e2e'] ? Reporter : undefined,
   test_page: 'tests/index.html?hidepassed&nolint',
 };

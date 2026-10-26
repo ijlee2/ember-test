@@ -1,0 +1,9 @@
+# compiled output
+/dist/
+/tmp/
+ 
+# misc
+!.*
+.*/
+
+# specific to this package

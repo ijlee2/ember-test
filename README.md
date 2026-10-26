@@ -13,7 +13,7 @@ _Backward- and forward-compatible testing for Ember projects_
 
 ## Compatibility
 
-- Node.js v22 or above
+- Node.js v22.17 or above
 
 
 ## Contributing

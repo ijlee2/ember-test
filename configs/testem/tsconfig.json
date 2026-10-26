@@ -1,0 +1,10 @@
+{
+  "extends": "@shared-configs/typescript/node",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "declaration": false,
+    "rootDir": ".",
+    "types": ["@types/node"]
+  },
+  "include": ["src", "*.mts"]
+}
