@@ -9,7 +9,7 @@ assignees: ''
 
 Hello! Thanks for taking time to suggest how we can improve documentation.
 
-Here, documentation can mean a few different things, including README, code comments, and tests. Anything that will help everyone understand how to use `ember-test`!
+Here, documentation can mean a few different things, including README, code comments, and tests. Anything that will help everyone understand how to use `ember-testem`!
 
 
 ## I would like to see... 🙋‍♀️🙋‍♂️

@@ -5,7 +5,7 @@
   "description": "Configuration for eslint (Node)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ijlee2/ember-test.git"
+    "url": "https://github.com/ijlee2/ember-testem.git"
   },
   "author": "Isaac J. Lee",
   "type": "module",
