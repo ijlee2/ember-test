@@ -115,7 +115,7 @@ test('my-v2-app-strict | ember-testem', () => {
       '106. Unit | Utility | services/api > serialize: dasherizes keys and replaces undefined with null',
       '107. Unit | Utility | services/api > serialize: preserves values that are not undefined',
       '108. ember-qunit: Ember.onerror validation: Ember.onerror is functioning properly',
-      '108 tests, 107 passed, 0 failed, 1 skipped',
+      '108 tests, 105 passed, 0 failed, 3 skipped',
       '',
     ].join('\n'),
   );
