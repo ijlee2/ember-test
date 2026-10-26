@@ -1,5 +1,11 @@
 # ember-testem
 
+## 0.5.1
+
+### Patch Changes
+
+- [#30](https://github.com/ijlee2/ember-testem/pull/30) Clarified what to do if a package already depends on testem ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.5.0
 
 ### Minor Changes
