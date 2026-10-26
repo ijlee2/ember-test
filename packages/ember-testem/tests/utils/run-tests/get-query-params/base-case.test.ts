@@ -7,6 +7,7 @@ test('utils | run-tests | get-query-params > base case', function () {
     qunit: {
       filter: undefined,
       module: undefined,
+      seed: undefined,
     },
   });
 

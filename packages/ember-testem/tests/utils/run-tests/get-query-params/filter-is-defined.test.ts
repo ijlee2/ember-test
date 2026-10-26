@@ -7,6 +7,7 @@ test('utils | run-tests | get-query-params > filter is defined', function () {
     qunit: {
       filter: 'Integration |',
       module: undefined,
+      seed: undefined,
     },
   });
 

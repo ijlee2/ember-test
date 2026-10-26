@@ -7,6 +7,7 @@ test('utils | run-tests | get-query-params > filter and module are defined', fun
     qunit: {
       filter: 'we can pass',
       module: 'Integration | Component | ui/form/input',
+      seed: undefined,
     },
   });
 

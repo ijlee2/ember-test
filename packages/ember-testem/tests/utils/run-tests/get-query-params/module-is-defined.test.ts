@@ -7,6 +7,7 @@ test('utils | run-tests | get-query-params > module is defined', function () {
     qunit: {
       filter: undefined,
       module: 'Acceptance | index',
+      seed: undefined,
     },
   });
 

@@ -12,5 +12,9 @@ export function getQueryParams(options: Pick<Options, 'qunit'>): string {
     params.push(`filter=${qunit.filter}`);
   }
 
+  if (qunit.seed) {
+    params.push(`seed=${qunit.seed}`);
+  }
+
   return params.join('&');
 }
