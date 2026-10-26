@@ -11,7 +11,7 @@ _Backward- and forward-compatible testing for Ember projects_
 pnpm add -D ember-testem
 ```
 
-2\. Configure `testem` in `testem.mjs`.
+2\. Configure `testem` in `testem.{mjs,mts}`.
 
 ```js
 export default {
@@ -19,7 +19,7 @@ export default {
     Chrome: {
       ci: [
         // --no-sandbox is needed when running Chrome inside a container
-        process.env.CI ? '--no-sandbox' : null,
+        process.env['CI'] ? '--no-sandbox' : null,
         '--headless',
         '--disable-dev-shm-usage',
         '--disable-software-rasterizer',
@@ -218,7 +218,7 @@ ember-test --port 0
 >
 > `ember-testem` provides a limited API on purpose.
 >
-> For `ember-cli` options like `--host`, `--launch`, `--query`, `--reporter`, `--ssl`, `--ssl-cert`, `--ssl-key`, `--test-page`, `--testem-debug`), [configure `testem` in `testem.mjs` instead](https://github.com/ember-cli/ember-cli/blob/v7.3.0-ember-cli/lib/tasks/test.js#L54-L71).
+> For `ember-cli` options like `--host`, `--launch`, `--query`, `--reporter`, `--ssl`, `--ssl-cert`, `--ssl-key`, `--test-page`, `--testem-debug`), [configure `testem` in `testem.{mjs,mts}` instead](https://github.com/ember-cli/ember-cli/blob/v7.3.0-ember-cli/lib/tasks/test.js#L54-L71).
 
 
 ## Compatibility

@@ -1,4 +1,42 @@
+type Data = {
+  error?: Error;
+  failed: number;
+  items: unknown[];
+  launcherId: string;
+  logs: {
+    text: string;
+    type: 'error' | 'info' | 'log' | 'warn';
+  }[];
+  name: string;
+  originalResultObj: {
+    failed: 0 | 1;
+    id: number;
+    items: unknown[];
+    name: string;
+    passed: 0 | 1;
+    runDuration: number;
+    skipped: boolean;
+    testId: string;
+    todo: boolean;
+    total: number;
+  };
+  passed: boolean;
+  pending: boolean | undefined;
+  runDuration: number;
+  skipped: boolean;
+  todo: boolean;
+};
+
 export class Reporter {
+  private numTests: {
+    failed: number;
+    passed: number;
+    skipped: number;
+    total: number;
+  };
+
+  private runtime: number;
+
   constructor() {
     this.numTests = {
       failed: 0,
@@ -10,7 +48,7 @@ export class Reporter {
     this.runtime = 0;
   }
 
-  finish() {
+  finish(): void {
     const { failed, passed, skipped, total } = this.numTests;
 
     process.stdout.write(
@@ -20,7 +58,7 @@ export class Reporter {
     // process.stdout.write(`Runtime: ${Math.ceil(this.runtime / 100) / 10} s\n`);
   }
 
-  report(_prefix, data) {
+  report(_prefix: string, data: Data): void {
     const { failed, id, name, passed, runDuration } = data.originalResultObj;
 
     if (passed) {

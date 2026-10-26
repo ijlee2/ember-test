@@ -9,14 +9,30 @@
   },
   "author": "Isaac J. Lee",
   "type": "module",
-  "main": "index.mjs",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "lint": "prettier \"**/*.{cjs,mjs}\" --cache --check",
-    "lint:fix": "prettier \"**/*.{cjs,mjs}\" --cache --write"
+    "build": "sh build.sh --production",
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" && pnpm format",
+    "lint:format": "prettier . --cache --check",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "tsc --noEmit",
+    "prepare": "pnpm build"
   },
   "devDependencies": {
+    "@shared-configs/eslint-config-node": "workspace:*",
     "@shared-configs/prettier": "workspace:*",
-    "prettier": "^3.9.10"
+    "@shared-configs/typescript": "workspace:*",
+    "@types/node": "^22.20.5",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": "22.* || >= 24"
