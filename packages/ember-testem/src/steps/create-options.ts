@@ -1,4 +1,5 @@
 import type { CodemodOptions, Options } from '../types/index.js';
+import { createSeed } from '../utils/create-options/create-seed.js';
 
 export function createOptions(codemodOptions: CodemodOptions): Options {
   const { buildPath, port, projectRoot, qunit, server } = codemodOptions;
@@ -8,6 +9,10 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     launchBrowser: Boolean(server),
     port,
     projectRoot,
-    qunit,
+    qunit: {
+      filter: qunit.filter,
+      module: qunit.module,
+      seed: createSeed(qunit.random),
+    },
   };
 }

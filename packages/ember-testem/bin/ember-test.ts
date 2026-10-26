@@ -32,6 +32,10 @@ const argv = yargs(hideBin(process.argv))
       'Port for running tests. Pass 0 to automatically pick an available port.',
     type: 'number',
   })
+  .option('random', {
+    describe: 'Randomize the order of tests (with a seed)',
+    type: 'string',
+  })
   .option('root', {
     describe: 'Project root',
     type: 'string',
@@ -55,7 +59,8 @@ const codemodOptions: CodemodOptions = {
   projectRoot: argv['root'] ?? process.cwd(),
   qunit: {
     filter: argv['filter'],
-    testModule: argv['module'],
+    module: argv['module'],
+    random: argv['random'],
   },
   server: argv['server'],
 };

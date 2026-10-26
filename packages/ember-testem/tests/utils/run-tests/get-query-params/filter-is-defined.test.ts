@@ -6,7 +6,8 @@ test('utils | run-tests | get-query-params > filter is defined', function () {
   const queryParams = getQueryParams({
     qunit: {
       filter: 'Integration |',
-      testModule: undefined,
+      module: undefined,
+      seed: undefined,
     },
   });
 

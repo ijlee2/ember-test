@@ -214,6 +214,24 @@ ember-test --port 0
 
 </details>
 
+<details>
+
+<summary>Optional: Randomize tests</summary>
+
+Pass `--random` to randomize the order of tests. This helps you guarantee that your tests are independent of one another.
+
+```sh
+ember-test --random
+```
+
+You can also pass a seed to run tests in a particular random order.
+
+```sh
+ember-test --random gflqlwrm59j
+```
+
+</details>
+
 > [!NOTE]
 >
 > `ember-testem` provides a limited API on purpose.

@@ -4,7 +4,8 @@ type CodemodOptions = {
   projectRoot: string;
   qunit: {
     filter: string | undefined;
-    testModule: string | undefined;
+    module: string | undefined;
+    random: string | undefined;
   };
   server: boolean | undefined;
 };
@@ -16,7 +17,8 @@ type Options = {
   projectRoot: string;
   qunit: {
     filter: string | undefined;
-    testModule: string | undefined;
+    module: string | undefined;
+    seed: string | undefined;
   };
 };
 

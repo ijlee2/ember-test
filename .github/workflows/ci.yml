@@ -107,6 +107,7 @@ jobs:
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
+          - 'ember-testem-random'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -177,6 +178,7 @@ jobs:
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
+          - 'ember-testem-random'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -247,6 +249,7 @@ jobs:
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
+          - 'ember-testem-random'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -317,6 +320,7 @@ jobs:
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
+          - 'ember-testem-random'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -387,6 +391,7 @@ jobs:
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
+          - 'ember-testem-random'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
