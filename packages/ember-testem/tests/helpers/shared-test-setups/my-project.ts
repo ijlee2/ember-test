@@ -7,6 +7,7 @@ const codemodOptions: CodemodOptions = {
   qunit: {
     filter: undefined,
     module: undefined,
+    random: undefined,
   },
   server: undefined,
 };
@@ -19,6 +20,7 @@ const options: Options = {
   qunit: {
     filter: undefined,
     module: undefined,
+    seed: undefined,
   },
 };
 

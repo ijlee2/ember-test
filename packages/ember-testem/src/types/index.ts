@@ -5,6 +5,7 @@ type CodemodOptions = {
   qunit: {
     filter: string | undefined;
     module: string | undefined;
+    random: string | undefined;
   };
   server: boolean | undefined;
 };
@@ -17,6 +18,7 @@ type Options = {
   qunit: {
     filter: string | undefined;
     module: string | undefined;
+    seed: string | undefined;
   };
 };
 
