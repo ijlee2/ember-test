@@ -1,4 +1,4 @@
-# Contributing to ember-test
+# Contributing to ember-testem
 
 ## Local development
 
@@ -9,13 +9,13 @@
 1. Fork and clone this repo.
 
     ```sh
-    git clone git@github.com:<your-github-handle>/ember-test.git
+    git clone git@github.com:<your-github-handle>/ember-testem.git
     ```
 
 1. Change directory.
 
     ```sh
-    cd ember-test
+    cd ember-testem
     ```
 
 1. Use [`pnpm`](https://pnpm.io/installation) to install dependencies.
@@ -103,7 +103,7 @@
     git push origin tag-0.1.2
     ```
 
-1. [Create a tag](https://github.com/ijlee2/ember-test/releases/new) and provide release notes. The tag name should match the workspace root's version (e.g. `0.1.2`).
+1. [Create a tag](https://github.com/ijlee2/ember-testem/releases/new) and provide release notes. The tag name should match the workspace root's version (e.g. `0.1.2`).
 
 1. Once the tag is created, the packages are published to npm using trusted publishing.
 

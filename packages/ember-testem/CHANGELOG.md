@@ -4,48 +4,48 @@
 
 ### Minor Changes
 
-- [#23](https://github.com/ijlee2/ember-test/pull/23) Required Node 22.17.0 or above ([@ijlee2](https://github.com/ijlee2))
-- [#23](https://github.com/ijlee2/ember-test/pull/23) Updated testem to 4.0.0-beta.1 ([@ijlee2](https://github.com/ijlee2))
-- [#20](https://github.com/ijlee2/ember-test/pull/20) Added e2e tests ([@ijlee2](https://github.com/ijlee2))
+- [#23](https://github.com/ijlee2/ember-testem/pull/23) Required Node 22.17.0 or above ([@ijlee2](https://github.com/ijlee2))
+- [#23](https://github.com/ijlee2/ember-testem/pull/23) Updated testem to 4.0.0-beta.1 ([@ijlee2](https://github.com/ijlee2))
+- [#20](https://github.com/ijlee2/ember-testem/pull/20) Added e2e tests ([@ijlee2](https://github.com/ijlee2))
 
 ### Patch Changes
 
-- [#21](https://github.com/ijlee2/ember-test/pull/21) Updated chokidar to 6.0.0 ([@ijlee2](https://github.com/ijlee2))
+- [#21](https://github.com/ijlee2/ember-testem/pull/21) Updated chokidar to 6.0.0 ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.3.3
 
 ### Patch Changes
 
-- [#18](https://github.com/ijlee2/ember-test/pull/18) Introduced trusted publishing ([@ijlee2](https://github.com/ijlee2))
-- [#17](https://github.com/ijlee2/ember-test/pull/17) Generalized getQueryParams ([@ijlee2](https://github.com/ijlee2))
+- [#18](https://github.com/ijlee2/ember-testem/pull/18) Introduced trusted publishing ([@ijlee2](https://github.com/ijlee2))
+- [#17](https://github.com/ijlee2/ember-testem/pull/17) Generalized getQueryParams ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.3.2
 
 ### Patch Changes
 
-- [#15](https://github.com/ijlee2/ember-test/pull/15) Provided more detailed instructions for v2 addons ([@ijlee2](https://github.com/ijlee2))
+- [#15](https://github.com/ijlee2/ember-testem/pull/15) Provided more detailed instructions for v2 addons ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.3.1
 
 ### Patch Changes
 
-- [#14](https://github.com/ijlee2/ember-test/pull/14) Updated testem to 3.21.3 ([@ijlee2](https://github.com/ijlee2))
+- [#14](https://github.com/ijlee2/ember-testem/pull/14) Updated testem to 3.21.3 ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.3.0
 
 ### Minor Changes
 
-- [#11](https://github.com/ijlee2/ember-test/pull/11) Renamed --test-port to --port. Deprecated --test-port. ([@ijlee2](https://github.com/ijlee2))
+- [#11](https://github.com/ijlee2/ember-testem/pull/11) Renamed --test-port to --port. Deprecated --test-port. ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.2.0
 
 ### Minor Changes
 
-- [#9](https://github.com/ijlee2/ember-test/pull/9) Updated README ([@ijlee2](https://github.com/ijlee2))
-- [#7](https://github.com/ijlee2/ember-test/pull/7) Supported filters ([@ijlee2](https://github.com/ijlee2))
+- [#9](https://github.com/ijlee2/ember-testem/pull/9) Updated README ([@ijlee2](https://github.com/ijlee2))
+- [#7](https://github.com/ijlee2/ember-testem/pull/7) Supported filters ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.1.0
 
 ### Minor Changes
 
-- [#4](https://github.com/ijlee2/ember-test/pull/4) Supported --path, --server, and --test-port ([@ijlee2](https://github.com/ijlee2))
+- [#4](https://github.com/ijlee2/ember-testem/pull/4) Supported --path, --server, and --test-port ([@ijlee2](https://github.com/ijlee2))
