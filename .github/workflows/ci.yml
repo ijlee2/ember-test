@@ -104,7 +104,6 @@ jobs:
       fail-fast: false
       matrix:
         test-scenario:
-          - 'ember-cli'
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
@@ -175,7 +174,6 @@ jobs:
       fail-fast: false
       matrix:
         test-scenario:
-          - 'ember-cli'
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
@@ -246,7 +244,6 @@ jobs:
       fail-fast: false
       matrix:
         test-scenario:
-          - 'ember-cli'
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
@@ -317,7 +314,6 @@ jobs:
       fail-fast: false
       matrix:
         test-scenario:
-          - 'ember-cli'
           - 'ember-testem'
           - 'ember-testem-filter-by-filter'
           - 'ember-testem-filter-by-module'
@@ -346,4 +342,74 @@ jobs:
 
       - name: Test
         run: node tests/my-v2-app/${{ matrix.test-scenario }}.test.ts
+        working-directory: 'tests/e2e'
+
+
+  build-test-app-my-v2-app-strict:
+    name: Build test app (my-v2-app-strict)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build test app
+        run: pnpm build:test
+        working-directory: 'tests/my-v2-app-strict'
+
+      - name: Upload test app
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'my-v2-app-strict-dist'
+          path: 'tests/my-v2-app-strict/dist'
+
+
+  test-my-v2-app-strict:
+    name: Test (my-v2-app-strict)
+    needs: [build-test-app-my-v2-app-strict]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test-scenario:
+          - 'ember-testem'
+          - 'ember-testem-filter-by-filter'
+          - 'ember-testem-filter-by-module'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download test app
+        uses: actions/download-artifact@v8
+        with:
+          name: 'my-v2-app-strict-dist'
+          path: 'tests/my-v2-app-strict/dist'
+
+      - name: Test
+        run: node tests/my-v2-app-strict/${{ matrix.test-scenario }}.test.ts
         working-directory: 'tests/e2e'
