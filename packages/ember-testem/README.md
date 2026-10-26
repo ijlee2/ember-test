@@ -22,6 +22,8 @@ Until now, testing Ember apps and addons required `ember-cli`, a monolith packag
 pnpm add -D ember-testem
 ```
 
+You can uninstall `testem` if it is listed in `package.json`.
+
 2\. Configure `testem` in `testem.{mjs,mts}`.
 
 ```js
