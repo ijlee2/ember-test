@@ -3,6 +3,17 @@
 _Backward- and forward-compatible testing for Ember projects_
 
 
+## Why?
+
+Until now, testing Ember apps and addons required `ember-cli`, a monolith package that is written in JavaScript and has little relevance in v2 apps and v2 addons. Ember's test ecosystem (e.g. `ember-exam`, `@percy/ember`) is at risk because it is built on `ember-cli`.
+
+`ember-testem` aims to show that:
+
+- The fix is minimal, backward-, and forward-compatible (apps with strict resolver, apps without `ember-cli`).
+- We can keep using `qunit` and `testem`. No need to switch to another test framework and rewrite tests.
+- We can keep using battle-tested packages like `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
+
+
 ## Quickstart
 
 1\. Install `ember-testem` as a development dependency. The package provides an executable named `ember-test`.
@@ -37,7 +48,7 @@ export default {
 };
 ```
 
-3\. Update the `test` script in `package.json` so that it separates concerns. Build the test app, then run it.
+3\. Update the `test` script in `package.json` so that it builds the test app, then runs the app (the tests).
 
 ```diff
 {
@@ -55,7 +66,7 @@ export default {
 }
 ```
 
-Note, `test:watch` can encounter race conditions. Once the test build is complete, refresh the test browser to see the latest results.
+Note, `test:watch` may encounter race conditions. Once the build is complete, refresh the test browser to see the latest results.
 
 <details>
 
