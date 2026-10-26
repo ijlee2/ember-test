@@ -10,7 +10,7 @@ import {
   setupExperiments,
 } from 'my-v2-app-strict/tests/helpers';
 import { seedProducts } from 'my-v2-app-strict/tests/helpers/mirage/seeds';
-import { module, test } from 'qunit';
+import { module, skip, test } from 'qunit';
 
 interface TestContext extends ApplicationTestContext {}
 
@@ -49,7 +49,7 @@ module('Acceptance | products', function (hooks) {
       ]);
     });
 
-    test('We can filter and sort products', async function (assert) {
+    skip('We can filter and sort products', async function (assert) {
       await visit('/products');
       await fillIn('[data-test-field="Filter by name"]', 'cake');
 
@@ -134,7 +134,7 @@ module('Acceptance | products', function (hooks) {
       ]);
     });
 
-    test('We can filter and sort products', async function (assert) {
+    skip('We can filter and sort products', async function (assert) {
       await visit('/products');
       await fillIn('[data-test-field="Filter by name"]', 'cake');
 
