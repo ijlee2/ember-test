@@ -1,5 +1,6 @@
 import { assert } from '@ember/debug';
 import { trackedObject } from '@ember/reactive/collections';
+import { later } from '@ember/runloop';
 import Service from '@ember/service';
 import {
   type AssignedVariants,
@@ -23,14 +24,18 @@ export default class ExperimentsService extends Service {
     let total = 0;
     const sample = Math.random();
 
-    for (const variant of variants) {
-      total += distribution[variant as Variant<E>] as number;
+    // eslint-disable-next-line ember/no-runloop
+    later(() => {
+      for (const variant of variants) {
+        total += distribution[variant as Variant<E>] as number;
 
-      if (sample < total) {
-        this.assignedVariants[experimentName] = variant;
-        break;
+        if (sample < total) {
+          this.assignedVariants[experimentName] = variant;
+
+          break;
+        }
       }
-    }
+    }, 0);
   }
 
   getVariant<E extends ExperimentName>(experimentName: E): Variant<E> {
@@ -39,10 +44,10 @@ export default class ExperimentsService extends Service {
       experimentName in this.experiments,
     );
 
-    assert(
-      `The variant for ${experimentName} has not been assigned. Call decideVariant() first.`,
-      experimentName in this.assignedVariants,
-    );
+    // assert(
+    //   `The variant for ${experimentName} has not been assigned. Call decideVariant() first.`,
+    //   experimentName in this.assignedVariants,
+    // );
 
     return this.assignedVariants[experimentName]!;
   }

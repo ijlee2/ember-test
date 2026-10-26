@@ -1,18 +1,26 @@
 import 'ember-a11y-refocus/styles/navigation-narrator.css';
 import './assets/app.css';
 
-import Application from '@ember/application';
 import setupInspector from '@embroider/legacy-inspector-support/ember-source-4.12';
-import compatModules from '@embroider/virtual/compat-modules';
-import loadInitializers from 'ember-load-initializers';
-import Resolver from 'ember-resolver';
-import config from 'my-v2-app-strict/config/environment';
+import IntlService from 'ember-intl/services/intl';
+import PageTitleService from 'ember-page-title/services/page-title';
+import Application from 'ember-strict-application-resolver';
+
+import Router from './router';
+import ApiService from './services/api';
+import ExperimentsService from './services/experiments';
 
 export default class App extends Application {
   inspector = setupInspector(this);
-  modulePrefix = config.modulePrefix;
-  podModulePrefix = config.podModulePrefix;
-  Resolver = Resolver.withModules(compatModules);
+  modules = {
+    './router': Router,
+    './services/api': ApiService,
+    './services/experiments': ExperimentsService,
+    './services/intl': IntlService,
+    './services/page-title': PageTitleService,
+    ...import.meta.glob('./controllers/**/*.{js,ts}', { eager: true }),
+    ...import.meta.glob('./routes/**/*.{js,ts}', { eager: true }),
+    ...import.meta.glob('./services/**/*.{js,ts}', { eager: true }),
+    ...import.meta.glob('./templates/**/*.{gjs,gts}', { eager: true }),
+  };
 }
-
-loadInitializers(App, config.modulePrefix, compatModules);
