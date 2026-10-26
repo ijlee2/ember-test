@@ -7,7 +7,7 @@ import {
 import type { Options } from '../../types/index.js';
 
 const latestVersions = {
-  'ember-testem': '^0.5.0',
+  'ember-testem': '^0.5.1',
 } as const;
 
 export function updateDependencies(
