@@ -60,7 +60,6 @@
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
     "test": "pnpm build:test && pnpm test:ember-testem",
-    "test:ember-cli": "echo \"A v2 addon does not have tests, run tests in my-v2-app\"",
     "test:ember-testem": "ember-test --path dist-for-testing --port 0",
     "test:watch": "concurrently \"pnpm build:test --watch\" \"pnpm test:ember-testem --server\" --names build,test"
   },

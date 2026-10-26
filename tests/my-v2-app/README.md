@@ -6,7 +6,7 @@
 
 ## What is it?
 
-`my-v2-app` is a v1 app. We use it to show that `ember-testem` supports v2 apps.
+`my-v2-app` is a v2 app. We use it to show that `ember-testem` supports v2 apps.
 
 
 ## Local development

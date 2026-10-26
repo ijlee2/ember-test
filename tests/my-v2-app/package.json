@@ -31,7 +31,6 @@
     "lint:types": "ember-tsc --noEmit",
     "start": "vite",
     "test": "pnpm build:test && pnpm test:ember-testem",
-    "test:ember-cli": "ember test --path dist --test-port 0",
     "test:ember-testem": "ember-test --port 0",
     "test:watch": "concurrently \"pnpm build:test --watch\" \"pnpm test:ember-testem --server\" --names build,test"
   },
