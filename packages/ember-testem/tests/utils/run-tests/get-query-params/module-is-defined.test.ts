@@ -6,7 +6,7 @@ test('utils | run-tests | get-query-params > module is defined', function () {
   const queryParams = getQueryParams({
     qunit: {
       filter: undefined,
-      testModule: 'Acceptance | index',
+      module: 'Acceptance | index',
     },
   });
 

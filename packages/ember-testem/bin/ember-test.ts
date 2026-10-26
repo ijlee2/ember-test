@@ -55,7 +55,7 @@ const codemodOptions: CodemodOptions = {
   projectRoot: argv['root'] ?? process.cwd(),
   qunit: {
     filter: argv['filter'],
-    testModule: argv['module'],
+    module: argv['module'],
   },
   server: argv['server'],
 };

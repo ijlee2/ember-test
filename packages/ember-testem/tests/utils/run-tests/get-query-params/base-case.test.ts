@@ -6,7 +6,7 @@ test('utils | run-tests | get-query-params > base case', function () {
   const queryParams = getQueryParams({
     qunit: {
       filter: undefined,
-      testModule: undefined,
+      module: undefined,
     },
   });
 

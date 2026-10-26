@@ -6,7 +6,7 @@ const codemodOptions: CodemodOptions = {
   projectRoot: 'tmp/my-project',
   qunit: {
     filter: undefined,
-    testModule: undefined,
+    module: undefined,
   },
   server: undefined,
 };
@@ -18,7 +18,7 @@ const options: Options = {
   projectRoot: 'tmp/my-project',
   qunit: {
     filter: undefined,
-    testModule: undefined,
+    module: undefined,
   },
 };
 
