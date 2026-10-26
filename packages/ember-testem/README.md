@@ -22,9 +22,15 @@ Until now, testing Ember apps and addons required `ember-cli`, a monolith packag
 pnpm add -D ember-testem
 ```
 
+You can uninstall `testem` if it is listed in `package.json`.
+
 2\. Configure `testem` in `testem.{mjs,mts}`.
 
-```js
+<details>
+
+<summary>Starter code</summary>
+
+```ts
 export default {
   browser_args: {
     Chrome: {
@@ -47,6 +53,8 @@ export default {
   test_page: 'tests/index.html?hidepassed&nolint',
 };
 ```
+
+</details>
 
 3\. Update the `test` script in `package.json` so that it builds the test app, then runs the app (the tests).
 

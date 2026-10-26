@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ijlee2/ember-testem.git",
-    "directory": "packages/ember-testem"
+    "directory": "packages/install-ember-testem"
   },
   "license": "MIT",
   "author": "Isaac J. Lee",
