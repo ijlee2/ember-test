@@ -22,7 +22,7 @@
       "ember-source/types"
     ]
   },
-  "include": ["app/**/*", "mirage/**/*", "tests/**/*", "types/**/*"],
+  "include": ["app", "mirage", "tests", "types", "*.mts"],
   "glint": {
     "additionalSpecialForms": {
       "imports": {

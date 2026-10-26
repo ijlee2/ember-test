@@ -25,7 +25,7 @@ export async function runTestsInDev(options: Options): Promise<void> {
 
   const watcher = watch([buildPath], {
     awaitWriteFinish: true,
-    usePolling: true,
+    backend: 'polling',
   });
 
   watcher.on('change', () => {

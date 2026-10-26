@@ -53,22 +53,22 @@
     "ember-auto-import": "^2.13.1",
     "ember-cli-babel": "^8.3.2",
     "ember-cli-htmlbars": "^7.0.1",
-    "ember-container-query": "^7.1.5",
+    "ember-container-query": "^7.1.6",
     "ember-template-imports": "^4.4.0",
     "ember-truth-helpers": "^5.0.0",
-    "embroider-css-modules": "^4.1.4"
+    "embroider-css-modules": "^4.1.5"
   },
   "devDependencies": {
-    "@ember-intl/lint": "^2.3.3",
-    "@ember-intl/v1-compat": "^2.0.5",
+    "@ember-intl/lint": "^2.3.5",
+    "@ember-intl/v1-compat": "^2.0.6",
     "@ember/optional-features": "^3.0.0",
     "@ember/test-helpers": "^5.7.0",
     "@embroider/test-setup": "^4.0.0",
-    "@glimmer/component": "^2.1.1",
+    "@glimmer/component": "^2.2.1",
     "@glimmer/tracking": "^1.1.2",
-    "@glint/ember-tsc": "^1.11.6",
-    "@glint/template": "^1.9.0",
-    "@glint/tsserver-plugin": "^2.7.9",
+    "@glint/ember-tsc": "^1.14.2",
+    "@glint/template": "^1.11.0",
+    "@glint/tsserver-plugin": "^2.7.15",
     "@shared-configs/eslint-config-ember": "workspace:*",
     "@shared-configs/prettier": "workspace:*",
     "@shared-configs/stylelint": "workspace:*",
@@ -80,7 +80,7 @@
     "ember-a11y-testing": "^8.0.1",
     "ember-cli": "~6.12.0",
     "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-intl": "^9.3.1",
+    "ember-intl": "^9.3.3",
     "ember-load-initializers": "^3.0.1",
     "ember-qunit": "^9.2.0",
     "ember-resolver": "^13.2.0",
@@ -93,7 +93,7 @@
     "qunit-dom": "^3.6.0",
     "stylelint": "^17.16.0",
     "typescript": "^6.0.3",
-    "webpack": "^5.112.0"
+    "webpack": "^5.112.2"
   },
   "peerDependencies": {
     "ember-intl": "^9.1.0"

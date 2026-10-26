@@ -1,6 +1,7 @@
 import baseConfiguration from '@shared-configs/eslint-config-node/typescript';
+import { defineConfig } from 'eslint/config';
 
-export default [
+export default defineConfig([
   {
     ignores: [
       'dist/',
@@ -13,4 +14,4 @@ export default [
     ],
   },
   ...baseConfiguration,
-];
+]);

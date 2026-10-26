@@ -15,12 +15,7 @@
       "vite/client"
     ]
   },
-  "include": [
-    "src/**/*",
-    "unpublished-development-types/**/*",
-    "tests/**/*",
-    "**/*.mts"
-  ],
+  "include": ["src", "unpublished-development-types", "tests", "*.mts"],
   "glint": {
     "additionalSpecialForms": {
       "globals": {
