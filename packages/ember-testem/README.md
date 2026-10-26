@@ -223,7 +223,7 @@ ember-test --port 0
 
 ## Compatibility
 
-- Node.js v22 or above
+- Node.js v22.17 or above
 
 
 ## Contributing
