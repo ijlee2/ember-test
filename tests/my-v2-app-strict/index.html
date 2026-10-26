@@ -7,24 +7,16 @@
     <meta name="description" content="A demo app to illustrate core and latest concepts in Ember.js">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
-    {{content-for "head"}}
-
     <link rel="icon" type="image/png" sizes="256x256" href="/assets/favicon.png">
     <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="/assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-
-    {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
-
     <script type="module">
       import Application from './app/app';
       import environment from './app/config';
 
       Application.create(environment.APP);
     </script>
-
-    {{content-for "body-footer"}}
   </body>
 </html>

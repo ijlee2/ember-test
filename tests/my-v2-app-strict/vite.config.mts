@@ -1,5 +1,5 @@
 import { loadTranslations } from '@ember-intl/vite';
-import { classicEmberSupport, ember, extensions } from '@embroider/vite';
+import { compatPrebuild, ember, extensions } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
 import { defineConfig } from 'vite';
 
@@ -14,7 +14,7 @@ export default defineConfig({
     entries: ['app/**/*.{gjs,gts,js,ts}', 'index.html'],
   },
   plugins: [
-    classicEmberSupport(),
+    compatPrebuild(),
     ember(),
     babel({
       babelHelpers: 'runtime',
