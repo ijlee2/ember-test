@@ -6,7 +6,7 @@
 
 ## What is it?
 
-`my-v2-addon` is a v1 app. We use it to show that `ember-testem` supports v2 addons.
+`my-v2-addon` is a v2 addon. We use it to show that `ember-testem` supports v2 addons.
 
 
 ## Local development
