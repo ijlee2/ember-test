@@ -1,5 +1,15 @@
 # my-v2-addon
 
+## 0.3.0
+
+### Minor Changes
+
+- [#23](https://github.com/ijlee2/ember-test/pull/23) Updated testem to 4.0.0-beta.1 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#21](https://github.com/ijlee2/ember-test/pull/21) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.4
 
 ### Patch Changes

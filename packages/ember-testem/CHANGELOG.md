@@ -1,5 +1,17 @@
 # ember-testem
 
+## 0.4.0
+
+### Minor Changes
+
+- [#23](https://github.com/ijlee2/ember-test/pull/23) Required Node 22.17.0 or above ([@ijlee2](https://github.com/ijlee2))
+- [#23](https://github.com/ijlee2/ember-test/pull/23) Updated testem to 4.0.0-beta.1 ([@ijlee2](https://github.com/ijlee2))
+- [#20](https://github.com/ijlee2/ember-test/pull/20) Added e2e tests ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#21](https://github.com/ijlee2/ember-test/pull/21) Updated chokidar to 6.0.0 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.3
 
 ### Patch Changes
