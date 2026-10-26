@@ -1,6 +1,6 @@
 {
   "name": "install-ember-testem",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Codemod to install ember-testem",
   "keywords": [
     "codemod",

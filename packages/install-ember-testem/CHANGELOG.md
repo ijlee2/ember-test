@@ -1,5 +1,12 @@
 # install-ember-testem
 
+## 0.1.2
+
+### Patch Changes
+
+- [#26](https://github.com/ijlee2/ember-testem/pull/26) Updated latestVersions ([@ijlee2](https://github.com/ijlee2))
+- [#25](https://github.com/ijlee2/ember-testem/pull/25) Renamed repo to ember-testem ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.1
 
 ### Patch Changes

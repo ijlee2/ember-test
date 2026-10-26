@@ -1,5 +1,11 @@
 # my-v1-addon
 
+## 0.3.1
+
+### Patch Changes
+
+- [#25](https://github.com/ijlee2/ember-testem/pull/25) Renamed repo to ember-testem ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.0
 
 ### Minor Changes

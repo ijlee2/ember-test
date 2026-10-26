@@ -1,5 +1,11 @@
 # my-v2-app-strict
 
+## 0.1.1
+
+### Patch Changes
+
+- [#25](https://github.com/ijlee2/ember-testem/pull/25) Renamed repo to ember-testem ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.0
 
 ### Minor Changes
