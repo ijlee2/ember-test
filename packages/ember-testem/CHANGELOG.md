@@ -1,5 +1,15 @@
 # ember-testem
 
+## 0.5.0
+
+### Minor Changes
+
+- [#27](https://github.com/ijlee2/ember-testem/pull/27) Allowed passing --random ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#28](https://github.com/ijlee2/ember-testem/pull/28) Motivated the problem in README ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.1
 
 ### Patch Changes

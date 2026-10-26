@@ -1,5 +1,11 @@
 # e2e
 
+## 0.2.0
+
+### Minor Changes
+
+- [#27](https://github.com/ijlee2/ember-testem/pull/27) Allowed passing --random ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.1
 
 ### Patch Changes
