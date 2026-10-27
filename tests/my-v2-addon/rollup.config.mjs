@@ -58,7 +58,7 @@ export default {
     // babel.config.json.
     babel({
       babelHelpers: 'bundled',
-      configFile: './babel.build.config.mjs',
+      configFile: './babel.config.mjs',
       extensions: ['.gjs', '.gts', '.js', '.ts'],
     }),
 

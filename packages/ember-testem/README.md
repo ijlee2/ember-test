@@ -129,9 +129,8 @@ If you still want to create the test app in the same package, you will need to i
 
 Files that need changes:
 
-- Babel (`babel.config.mjs`, `babel.build.config.mjs`)
+- Babel (`babel.test.config.mjs`)
 - Dependencies (`package.json`)
-- Rollup (`rollup.config.mjs`)
 - TypeScript (`tsconfig.json`, `tsconfig.build.json`)
 - Vite (`vite.test.config.mts`)
 

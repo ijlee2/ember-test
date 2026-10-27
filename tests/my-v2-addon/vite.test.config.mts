@@ -17,6 +17,7 @@ export default defineConfig({
     ember(),
     babel({
       babelHelpers: 'inline',
+      configFile: './babel.test.config.mjs',
       extensions,
       parallel: true,
     }),
