@@ -5,15 +5,15 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > file extension is .js (2)', function () {
+test('steps | update-testem-config > file extension is .mjs', function () {
   const inputProject = {
-    'testem.js': normalizeFile([
+    'testem.mjs': normalizeFile([
       `export default {`,
       `  launch_in_ci: ['Chrome'],`,
       `  launch_in_dev: ['Chrome'],`,
@@ -36,7 +36,7 @@ test('steps | update-config > file extension is .js (2)', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

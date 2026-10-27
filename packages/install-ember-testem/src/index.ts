@@ -1,12 +1,12 @@
 import {
   createOptions,
-  updateConfig,
   updatePackageJson,
+  updateTestemConfig,
 } from './steps/index.js';
 import type { CodemodOptions } from './types/index.js';
 
 export function runCodemod(codemodOptions: CodemodOptions): void {
   const options = createOptions(codemodOptions);
-  updateConfig(options);
+  updateTestemConfig(options);
   updatePackageJson(options);
 }
