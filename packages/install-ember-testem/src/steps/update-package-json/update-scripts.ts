@@ -1,3 +1,4 @@
+import { findFiles } from '@codemod-utils/files';
 import {
   convertToMap,
   convertToObject,
@@ -56,6 +57,8 @@ export function updateScripts(
   packageJson: PackageJson,
   options: Options,
 ): void {
+  const { packageType, projectRoot } = options;
+
   const scripts = convertToMap(packageJson['scripts']);
   const testScript = (scripts.get('test') ?? '') as string;
 
@@ -63,7 +66,7 @@ export function updateScripts(
     return;
   }
 
-  switch (options.packageType) {
+  switch (packageType) {
     case 'v1-addon':
     case 'v1-app': {
       scripts.set('build:test', 'ember build --environment test');
@@ -73,9 +76,13 @@ export function updateScripts(
 
     case 'v2-addon':
     case 'v2-app': {
+      const viteTestConfigFilePath = findFiles('vite.test.config.{mjs,mts}', {
+        projectRoot,
+      })[0]!;
+
       scripts.set(
         'build:test',
-        'NODE_ENV=development vite build --config vite.test.config.mts --mode development',
+        `NODE_ENV=development vite build --config ${viteTestConfigFilePath} --mode development`,
       );
 
       break;

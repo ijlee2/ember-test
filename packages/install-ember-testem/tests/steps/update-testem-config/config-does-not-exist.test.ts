@@ -5,13 +5,13 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > config does not exist', function () {
+test('steps | update-testem-config > config does not exist', function () {
   const inputProject = {};
 
   const outputProject = {
@@ -43,7 +43,7 @@ test('steps | update-config > config does not exist', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

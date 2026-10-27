@@ -5,15 +5,15 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > file extension is .js (1)', function () {
+test('steps | update-testem-config > file name starts with period', function () {
   const inputProject = {
-    'testem.js': normalizeFile([
+    '.testem.js': normalizeFile([
       `'use strict';`,
       ``,
       `module.exports = {`,
@@ -71,7 +71,7 @@ test('steps | update-config > file extension is .js (1)', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

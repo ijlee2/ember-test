@@ -5,10 +5,7 @@ import {
 } from '@codemod-utils/package-json';
 
 import type { Options } from '../../types/index.js';
-
-const latestVersions = {
-  'ember-testem': '^0.5.1',
-} as const;
+import { getLatestVersion } from '../../utils/blueprints.js';
 
 export function updateDependencies(
   packageJson: PackageJson,
@@ -19,12 +16,24 @@ export function updateDependencies(
     string
   >;
 
-  devDependencies.set('ember-testem', latestVersions['ember-testem']);
-  devDependencies.delete('testem');
+  const packagesToDelete = new Set(['testem']);
+
+  packagesToDelete.forEach((packageName) => {
+    devDependencies.delete(packageName);
+  });
+
+  const packagesToInstall = new Set(['ember-testem']);
 
   if (options.packageType === 'v2-addon') {
-    // TODO
+    packagesToInstall.add('@embroider/vite');
+    packagesToInstall.add('vite');
   }
+
+  packagesToInstall.forEach((packageName) => {
+    const version = getLatestVersion(packageName);
+
+    devDependencies.set(packageName, version);
+  });
 
   packageJson['devDependencies'] = convertToObject(devDependencies) as Record<
     string,

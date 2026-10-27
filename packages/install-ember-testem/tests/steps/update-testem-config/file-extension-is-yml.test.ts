@@ -5,13 +5,13 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > file extension is .yml', function () {
+test('steps | update-testem-config > file extension is .yml', function () {
   const inputProject = {
     'testem.yml': normalizeFile([
       `framework: qunit`,
@@ -40,7 +40,7 @@ test('steps | update-config > file extension is .yml', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

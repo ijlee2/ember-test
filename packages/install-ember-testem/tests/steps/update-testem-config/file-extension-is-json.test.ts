@@ -5,13 +5,13 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > file extension is .json', function () {
+test('steps | update-testem-config > file extension is .json', function () {
   const inputProject = {
     'testem.json': normalizeFile([
       `{`,
@@ -36,7 +36,7 @@ test('steps | update-config > file extension is .json', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

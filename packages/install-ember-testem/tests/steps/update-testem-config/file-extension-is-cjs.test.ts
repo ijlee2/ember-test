@@ -5,38 +5,41 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateConfig } from '../../../src/steps/index.js';
+import { updateTestemConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-config > file name starts with period', function () {
+test('steps | update-testem-config > file extension is .cjs', function () {
   const inputProject = {
-    '.testem.js': normalizeFile([
+    'testem.cjs': normalizeFile([
       `'use strict';`,
       ``,
-      `module.exports = {`,
-      `  test_page: 'tests/index.html?hidepassed',`,
-      `  disable_watching: true,`,
-      `  launch_in_ci: ['Chrome'],`,
-      `  launch_in_dev: ['Chrome'],`,
-      `  browser_start_timeout: 120,`,
-      `  browser_args: {`,
-      `    Chrome: {`,
-      `      ci: [`,
-      `        // --no-sandbox is needed when running Chrome inside a container`,
-      `        process.env.CI ? '--no-sandbox' : null,`,
-      `        '--headless',`,
-      `        '--disable-dev-shm-usage',`,
-      `        '--disable-software-rasterizer',`,
-      `        '--mute-audio',`,
-      `        '--remote-debugging-port=0',`,
-      `        '--window-size=1440,900',`,
-      `      ].filter(Boolean),`,
+      `if (typeof module !== 'undefined') {`,
+      `  module.exports = {`,
+      `    test_page: 'tests/index.html?hidepassed',`,
+      `    cwd: 'dist',`,
+      `    disable_watching: true,`,
+      `    launch_in_ci: ['Chrome'],`,
+      `    launch_in_dev: ['Chrome'],`,
+      `    browser_start_timeout: 120,`,
+      `    browser_args: {`,
+      `      Chrome: {`,
+      `        ci: [`,
+      `          // --no-sandbox is needed when running Chrome inside a container`,
+      `          process.env.CI ? '--no-sandbox' : null,`,
+      `          '--headless',`,
+      `          '--disable-dev-shm-usage',`,
+      `          '--disable-software-rasterizer',`,
+      `          '--mute-audio',`,
+      `          '--remote-debugging-port=0',`,
+      `          '--window-size=1440,900',`,
+      `        ].filter(Boolean),`,
+      `      },`,
       `    },`,
-      `  },`,
-      `};`,
+      `  };`,
+      `}`,
       ``,
     ]),
   };
@@ -45,6 +48,7 @@ test('steps | update-config > file name starts with period', function () {
     'testem.mjs': normalizeFile([
       `export default {`,
       `  test_page: 'tests/index.html?hidepassed',`,
+      `  cwd: 'dist',`,
       `  disable_watching: true,`,
       `  launch_in_ci: ['Chrome'],`,
       `  launch_in_dev: ['Chrome'],`,
@@ -71,7 +75,7 @@ test('steps | update-config > file name starts with period', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateConfig(options);
+  updateTestemConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });
