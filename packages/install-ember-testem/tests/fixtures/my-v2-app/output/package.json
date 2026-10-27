@@ -12,8 +12,11 @@
     "@embroider/vite": "^1.7.10",
     "concurrently": "^10.0.5",
     "ember-cli": "~7.3.0",
+    "ember-qunit": "^9.2.0",
     "ember-source": "~7.3.0",
     "ember-testem": "^0.5.1",
+    "qunit": "^3.0.0",
+    "testem": "^3.21.5",
     "typescript": "^6.0.3"
   },
   "ember": {
