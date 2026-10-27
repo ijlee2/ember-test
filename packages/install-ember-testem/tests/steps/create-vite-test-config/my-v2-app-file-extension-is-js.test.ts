@@ -5,13 +5,13 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateViteConfig } from '../../../src/steps/index.js';
+import { createViteTestConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-vite-config > my-v2-app (file extension is .js)', function () {
+test('steps | create-vite-test-config > my-v2-app (file extension is .js)', function () {
   const inputProject = {
     'vite.config.js': normalizeFile([
       `import { classicEmberSupport, ember, extensions } from '@embroider/vite';`,
@@ -70,7 +70,7 @@ test('steps | update-vite-config > my-v2-app (file extension is .js)', function 
 
   loadFixture(inputProject, codemodOptions);
 
-  updateViteConfig(options);
+  createViteTestConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

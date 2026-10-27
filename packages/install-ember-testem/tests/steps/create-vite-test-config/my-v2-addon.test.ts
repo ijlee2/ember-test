@@ -5,13 +5,13 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateViteConfig } from '../../../src/steps/index.js';
+import { createViteTestConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-addon.js';
 
-test('steps | update-vite-config > my-v2-addon', function () {
+test('steps | create-vite-test-config > my-v2-addon', function () {
   const inputProject = {};
 
   const outputProject = {
@@ -49,7 +49,7 @@ test('steps | update-vite-config > my-v2-addon', function () {
 
   loadFixture(inputProject, codemodOptions);
 
-  updateViteConfig(options);
+  createViteTestConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });

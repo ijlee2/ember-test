@@ -34,7 +34,7 @@ function resolveBlueprintFilePath(
   return blueprintFilePath.replace('__mjs__', hasTypeScript ? 'mts' : 'mjs');
 }
 
-export function updateViteConfig(options: Options): void {
+export function createViteTestConfig(options: Options): void {
   const { packageType, projectRoot } = options;
 
   if (packageType === 'v1-addon' || packageType === 'v1-app') {

@@ -1,19 +1,19 @@
 import { assertFixture, loadFixture, test } from '@codemod-utils/tests';
 
-import { updateViteConfig } from '../../../src/steps/index.js';
+import { createViteTestConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
-} from '../../helpers/shared-test-setups/my-v1-app.js';
+} from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-vite-config > my-v1-app', function () {
+test('steps | create-vite-test-config > my-v2-app (config does not exist)', function () {
   const inputProject = {};
 
   const outputProject = {};
 
   loadFixture(inputProject, codemodOptions);
 
-  updateViteConfig(options);
+  createViteTestConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });
