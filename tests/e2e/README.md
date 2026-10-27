@@ -15,4 +15,7 @@
 # Lint files
 pnpm lint
 pnpm lint:fix
+
+# Run tests
+node tests/my-v2-app/ember-testem.test.ts # etc.
 ```
