@@ -16,6 +16,10 @@ Until now, testing Ember apps and addons required `ember-cli`, a monolith packag
 
 ## Quickstart
 
+> [!TIP]
+>
+> From the root of your Ember app or addon, run `pnpx install-ember-testem` to automate the setup.
+
 1\. Install `ember-testem` as a development dependency. The package provides an executable named `ember-test`.
 
 ```sh
