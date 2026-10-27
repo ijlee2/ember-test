@@ -16,6 +16,15 @@ Until now, testing Ember apps and addons required `ember-cli`, a monolith packag
 - We can keep using battle-tested packages like `@embroider/try`, `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
 
 
+## Quickstart
+
+From the root of your Ember app or addon, run `install-ember-testem` to set up `ember-testem`.
+
+```sh
+pnpx install-ember-testem
+```
+
+
 ## Package overview
 
 - [ember-testem](./packages/ember-testem/README.md)
