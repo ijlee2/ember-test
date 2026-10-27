@@ -20,6 +20,7 @@ export function updateDependencies(
   >;
 
   devDependencies.set('ember-testem', latestVersions['ember-testem']);
+  devDependencies.delete('testem');
 
   if (options.packageType === 'v2-addon') {
     // TODO
