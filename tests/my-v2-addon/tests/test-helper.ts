@@ -4,7 +4,7 @@ import { setupEmberOnerrorValidation, start as qunitStart } from 'ember-qunit';
 import QUnit from 'qunit';
 import { setup } from 'qunit-dom';
 
-import Application from './app.ts';
+import Application from './app';
 
 export function start(): void {
   setTesting(true);
@@ -14,7 +14,6 @@ export function start(): void {
       rootElement: '#ember-testing',
     }),
   );
-
   setup(QUnit.assert);
   setupEmberOnerrorValidation();
   qunitStart();

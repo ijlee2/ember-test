@@ -11,6 +11,8 @@ export function updateDependencies(
   packageJson: PackageJson,
   options: Options,
 ): void {
+  const { packageType, project } = options;
+
   const devDependencies = convertToMap(packageJson['devDependencies']) as Map<
     string,
     string
@@ -24,9 +26,19 @@ export function updateDependencies(
 
   const packagesToInstall = new Set(['ember-testem']);
 
-  if (options.packageType === 'v2-addon') {
+  if (packageType === 'v2-addon') {
+    packagesToInstall.add('@ember/test-helpers');
+    packagesToInstall.add('@embroider/macros');
     packagesToInstall.add('@embroider/vite');
+    packagesToInstall.add('ember-qunit');
+    packagesToInstall.add('ember-strict-application-resolver');
+    packagesToInstall.add('qunit');
+    packagesToInstall.add('qunit-dom');
     packagesToInstall.add('vite');
+
+    if (project.hasTypeScript) {
+      packagesToInstall.add('@types/qunit');
+    }
   }
 
   packagesToInstall.forEach((packageName) => {

@@ -38,7 +38,7 @@ export default {
 
     addon.declarations(
       'declarations',
-      'pnpm ember-tsc --declaration --project tsconfig.json',
+      'pnpm ember-tsc --declaration --project tsconfig.build.json',
     ),
 
     addon.keepAssets(['**/*.css']),
