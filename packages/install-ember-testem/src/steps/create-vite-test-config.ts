@@ -62,9 +62,12 @@ export function createViteTestConfig(options: Options): void {
 
   const cwd = join(blueprintsRoot, packageType);
 
-  const blueprintFilePaths = findFiles('vite.test.config.__mjs__', {
-    projectRoot: cwd,
-  });
+  const blueprintFilePaths = findFiles(
+    ['babel.test.config.mjs', 'vite.test.config.__mjs__'],
+    {
+      projectRoot: cwd,
+    },
+  );
 
   const fileMap = new Map(
     blueprintFilePaths.map((blueprintFilePath) => {

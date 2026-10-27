@@ -1,9 +1,6 @@
-import { classicEmberSupport, ember, extensions } from '@embroider/vite';
+import { ember, extensions } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
 import { defineConfig } from 'vite';
-
-// For scenario testing
-const isCompat = Boolean(process.env.ENABLE_COMPAT_BUILD);
 
 export default defineConfig({
   build: {
@@ -16,10 +13,10 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [
-    ...(isCompat ? [classicEmberSupport()] : []),
     ember(),
     babel({
       babelHelpers: 'inline',
+      configFile: './babel.test.config.mjs',
       extensions,
       parallel: true,
     }),
