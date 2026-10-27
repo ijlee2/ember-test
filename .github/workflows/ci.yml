@@ -65,6 +65,37 @@ jobs:
         working-directory: ${{ matrix.package-location }}
 
 
+  test-on-windows:
+    name: Test on Windows
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package-location:
+          - 'packages/ember-testem'
+          - 'packages/install-ember-testem'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test
+        run: pnpm test
+        working-directory: ${{ matrix.package-location }}
+
+
   build-test-app-my-v1-addon:
     name: Build test app (my-v1-addon)
     runs-on: ubuntu-latest
