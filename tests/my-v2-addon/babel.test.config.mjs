@@ -1,3 +1,7 @@
+import { buildMacros } from '@embroider/macros/babel';
+
+const macros = buildMacros();
+
 export default {
   generatorOpts: {
     compact: false,
@@ -15,8 +19,7 @@ export default {
     [
       'babel-plugin-ember-template-compilation',
       {
-        targetFormat: 'hbs',
-        transforms: [],
+        transforms: [...macros.templateMacros],
       },
     ],
     [
@@ -27,5 +30,6 @@ export default {
         },
       },
     ],
+    ...macros.babelMacros,
   ],
 };
