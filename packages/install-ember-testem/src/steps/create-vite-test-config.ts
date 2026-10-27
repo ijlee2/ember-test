@@ -9,8 +9,7 @@ import { blueprintsRoot } from '../utils/blueprints.js';
 
 type Data = {
   hasTypeScript: boolean;
-  hasViteConfig: boolean;
-  viteConfigFilePath: string | undefined;
+  viteConfigFilePath?: string;
 };
 
 function findUserConfig(projectRoot: string): string | undefined {
@@ -26,18 +25,6 @@ function findUserConfig(projectRoot: string): string | undefined {
   return undefined;
 }
 
-function getFilesToSkip(data: Data): string[] {
-  const { hasViteConfig } = data;
-
-  const files = new Set<string>();
-
-  if (hasViteConfig) {
-    files.add('vite.config.__mjs__');
-  }
-
-  return Array.from(files);
-}
-
 function resolveBlueprintFilePath(
   blueprintFilePath: string,
   data: Data,
@@ -47,32 +34,35 @@ function resolveBlueprintFilePath(
   return blueprintFilePath.replace('__mjs__', hasTypeScript ? 'mts' : 'mjs');
 }
 
-export function updateViteConfig(options: Options): void {
+export function createViteTestConfig(options: Options): void {
   const { packageType, projectRoot } = options;
 
   if (packageType === 'v1-addon' || packageType === 'v1-app') {
     return;
   }
 
-  let filePath: string | undefined;
+  let data: Data;
 
-  if (packageType === 'v2-app') {
-    filePath = findUserConfig(projectRoot);
+  if (packageType === 'v2-addon') {
+    data = {
+      hasTypeScript: false,
+    };
+  } else {
+    const filePath = findUserConfig(projectRoot);
+
+    if (filePath === undefined) {
+      return;
+    }
+
+    data = {
+      hasTypeScript: filePath.endsWith('.mts') || filePath.endsWith('.ts'),
+      viteConfigFilePath: filePath,
+    };
   }
 
-  const data = {
-    hasTypeScript: Boolean(
-      filePath && (filePath.endsWith('.mts') || filePath.endsWith('.ts')),
-    ),
-    hasViteConfig: Boolean(filePath),
-    viteConfigFilePath: filePath ?? 'vite.config.mjs',
-  };
-
-  const filesToSkip = getFilesToSkip(data);
   const cwd = join(blueprintsRoot, packageType);
 
-  const blueprintFilePaths = findFiles('**/*', {
-    ignoreList: filesToSkip,
+  const blueprintFilePaths = findFiles('vite.test.config.__mjs__', {
     projectRoot: cwd,
   });
 
@@ -88,5 +78,5 @@ export function updateViteConfig(options: Options): void {
     }),
   );
 
-  createFiles(fileMap, options);
+  createFiles(fileMap, { projectRoot });
 }

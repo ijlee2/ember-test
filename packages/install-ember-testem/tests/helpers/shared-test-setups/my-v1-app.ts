@@ -6,6 +6,10 @@ const codemodOptions: CodemodOptions = {
 
 const options: Options = {
   packageType: 'v1-app',
+  project: {
+    hasEmberTestem: false,
+    hasTypeScript: false,
+  },
   projectRoot: 'tmp/my-v1-app',
 };
 

@@ -2,8 +2,14 @@ import { writeFileSync } from 'node:fs';
 import { EOL } from 'node:os';
 import { join } from 'node:path';
 
-export function createConfig(projectRoot: string): void {
-  const defaultFile = [
+import type { Options } from '../../types/index.js';
+
+export function createConfig(options: Options): void {
+  const { project, projectRoot } = options;
+
+  const filePath = project.hasTypeScript ? 'testem.mts' : 'testem.mjs';
+
+  const file = [
     `export default {`,
     `  browser_args: {`,
     `    Chrome: {`,
@@ -28,5 +34,5 @@ export function createConfig(projectRoot: string): void {
     ``,
   ].join(EOL);
 
-  writeFileSync(join(projectRoot, 'testem.mjs'), defaultFile, 'utf8');
+  writeFileSync(join(projectRoot, filePath), file, 'utf8');
 }

@@ -6,6 +6,10 @@ type CodemodOptions = {
 
 type Options = {
   packageType: Exclude<PackageType, 'node'>;
+  project: {
+    hasEmberTestem: boolean;
+    hasTypeScript: boolean;
+  };
   projectRoot: string;
 };
 

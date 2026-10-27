@@ -5,20 +5,20 @@ import {
   test,
 } from '@codemod-utils/tests';
 
-import { updateViteConfig } from '../../../src/steps/index.js';
+import { createViteTestConfig } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
 } from '../../helpers/shared-test-setups/my-v2-app.js';
 
-test('steps | update-vite-config > my-v2-app (file extension is .ts)', function () {
+test('steps | create-vite-test-config > my-v2-app (file extension is .mts)', function () {
   const inputProject = {
-    'vite.config.ts': normalizeFile([
+    'vite.config.mts': normalizeFile([
       `import { classicEmberSupport, ember, extensions } from '@embroider/vite';`,
       `import { babel } from '@rollup/plugin-babel';`,
-      `import { defineConfig } from 'vite';`,
+      `import type { UserConfig } from 'vite';`,
       ``,
-      `export default defineConfig({`,
+      `export default {`,
       `  plugins: [`,
       `    classicEmberSupport(),`,
       `    ember(),`,
@@ -28,18 +28,18 @@ test('steps | update-vite-config > my-v2-app (file extension is .ts)', function 
       `      parallel: true,`,
       `    }),`,
       `  ],`,
-      `});`,
+      `} satisfies UserConfig;`,
       ``,
     ]),
   };
 
   const outputProject = {
-    'vite.config.ts': normalizeFile([
+    'vite.config.mts': normalizeFile([
       `import { classicEmberSupport, ember, extensions } from '@embroider/vite';`,
       `import { babel } from '@rollup/plugin-babel';`,
-      `import { defineConfig } from 'vite';`,
+      `import type { UserConfig } from 'vite';`,
       ``,
-      `export default defineConfig({`,
+      `export default {`,
       `  plugins: [`,
       `    classicEmberSupport(),`,
       `    ember(),`,
@@ -49,13 +49,13 @@ test('steps | update-vite-config > my-v2-app (file extension is .ts)', function 
       `      parallel: true,`,
       `    }),`,
       `  ],`,
-      `});`,
+      `} satisfies UserConfig;`,
       ``,
     ]),
     'vite.test.config.mts': normalizeFile([
       `import { defineConfig } from 'vite';`,
       ``,
-      `import baseConfiguration from './vite.config.ts';`,
+      `import baseConfiguration from './vite.config.mts';`,
       ``,
       `export default defineConfig({`,
       `  ...baseConfiguration,`,
@@ -70,7 +70,7 @@ test('steps | update-vite-config > my-v2-app (file extension is .ts)', function 
 
   loadFixture(inputProject, codemodOptions);
 
-  updateViteConfig(options);
+  createViteTestConfig(options);
 
   assertFixture(outputProject, codemodOptions);
 });
