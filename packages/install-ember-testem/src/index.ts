@@ -1,5 +1,6 @@
 import {
   createOptions,
+  createTestsFolder,
   createViteTestConfig,
   updatePackageJson,
   updateTestemConfig,
@@ -15,5 +16,6 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
 
   updateTestemConfig(options);
   createViteTestConfig(options);
+  createTestsFolder(options);
   updatePackageJson(options);
 }
