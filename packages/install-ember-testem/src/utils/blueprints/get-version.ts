@@ -5,7 +5,7 @@ const latestVersions = new Map([
   ['@types/qunit', '2.19.14'],
   ['ember-qunit', '9.2.0'],
   ['ember-strict-application-resolver', '0.1.1'],
-  ['ember-testem', '0.5.1'],
+  ['ember-testem', '0.5.3'],
   ['qunit', '3.0.0'],
   ['qunit-dom', '3.6.0'],
   ['vite', '8.3.5'],
