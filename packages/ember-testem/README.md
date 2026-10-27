@@ -11,7 +11,7 @@ Until now, testing Ember apps and addons required `ember-cli`, a monolith packag
 
 - The fix is minimal, backward-, and forward-compatible (apps with strict resolver, apps without `ember-cli`).
 - We can keep using `qunit` and `testem`. No need to switch to another test framework and rewrite tests.
-- We can keep using battle-tested packages like `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
+- We can keep using battle-tested packages like `@embroider/try`, `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
 
 
 ## Quickstart

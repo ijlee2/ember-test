@@ -136,8 +136,8 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-testem'
-          - 'ember-testem-filter-by-filter'
-          - 'ember-testem-filter-by-module'
+          - 'ember-testem-filter'
+          - 'ember-testem-module'
           - 'ember-testem-random'
     timeout-minutes: 5
     steps:
@@ -207,8 +207,8 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-testem'
-          - 'ember-testem-filter-by-filter'
-          - 'ember-testem-filter-by-module'
+          - 'ember-testem-filter'
+          - 'ember-testem-module'
           - 'ember-testem-random'
     timeout-minutes: 5
     steps:
@@ -278,8 +278,8 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-testem'
-          - 'ember-testem-filter-by-filter'
-          - 'ember-testem-filter-by-module'
+          - 'ember-testem-filter'
+          - 'ember-testem-module'
           - 'ember-testem-random'
     timeout-minutes: 5
     steps:
@@ -349,8 +349,8 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-testem'
-          - 'ember-testem-filter-by-filter'
-          - 'ember-testem-filter-by-module'
+          - 'ember-testem-filter'
+          - 'ember-testem-module'
           - 'ember-testem-random'
     timeout-minutes: 5
     steps:
@@ -420,8 +420,8 @@ jobs:
       matrix:
         test-scenario:
           - 'ember-testem'
-          - 'ember-testem-filter-by-filter'
-          - 'ember-testem-filter-by-module'
+          - 'ember-testem-filter'
+          - 'ember-testem-module'
           - 'ember-testem-random'
     timeout-minutes: 5
     steps:

@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v2-app-strict.ts';
 
-test('my-v2-app-strict | ember-testem (--random)', () => {
+test('my-v2-app-strict | ember-testem --random', () => {
   const output = runCommand('ember-test --random hnk5e043wqa', options);
 
   assert.strictEqual(

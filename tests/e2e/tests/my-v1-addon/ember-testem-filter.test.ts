@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v1-addon.ts';
 
-test('my-v1-addon | ember-testem (filter by --filter)', () => {
+test('my-v1-addon | ember-testem --filter', () => {
   const output = runCommand('ember-test --filter "ui/form"', options);
 
   assert.strictEqual(

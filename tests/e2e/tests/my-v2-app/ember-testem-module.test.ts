@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v2-app.ts';
 
-test('my-v2-app | ember-testem (filter by --module)', () => {
+test('my-v2-app | ember-testem --module', () => {
   const output = runCommand(
     'ember-test --module "Acceptance | products"',
     options,

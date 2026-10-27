@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v2-addon.ts';
 
-test('my-v2-addon | ember-testem (--random)', () => {
+test('my-v2-addon | ember-testem --random', () => {
   const output = runCommand(
     'ember-test --path dist-for-testing --random kj05l8ejz5',
     options,

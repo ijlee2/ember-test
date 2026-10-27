@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
-import { options } from '../helpers/shared-test-setups/my-v2-app.ts';
+import { options } from '../helpers/shared-test-setups/my-v2-app-strict.ts';
 
-test('my-v2-app | ember-testem (filter by --filter)', () => {
+test('my-v2-app-strict | ember-testem --filter', () => {
   const output = runCommand('ember-test --filter "!acceptance"', options);
 
   assert.strictEqual(
@@ -92,7 +92,7 @@ test('my-v2-app | ember-testem (filter by --filter)', () => {
       '83. Unit | Utility | services/api > serialize: dasherizes keys and replaces undefined with null',
       '84. Unit | Utility | services/api > serialize: preserves values that are not undefined',
       '85. ember-qunit: Ember.onerror validation: Ember.onerror is functioning properly',
-      '85 tests, 85 passed, 0 failed, 0 skipped',
+      '85 tests, 84 passed, 0 failed, 1 skipped',
       '',
     ].join('\n'),
   );
