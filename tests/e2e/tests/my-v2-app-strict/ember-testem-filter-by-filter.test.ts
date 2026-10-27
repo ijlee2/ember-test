@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v2-app-strict.ts';
 
-test('my-v2-app-strict | ember-testem (filter by --filter)', () => {
+test('my-v2-app-strict | ember-testem --filter', () => {
   const output = runCommand('ember-test --filter "!acceptance"', options);
 
   assert.strictEqual(

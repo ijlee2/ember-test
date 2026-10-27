@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v1-app.ts';
 
-test('my-v1-app | ember-testem (filter by --filter)', () => {
+test('my-v1-app | ember-testem --filter', () => {
   const output = runCommand('ember-test --filter "integration"', options);
 
   assert.strictEqual(

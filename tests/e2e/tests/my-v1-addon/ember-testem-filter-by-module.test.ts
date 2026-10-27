@@ -1,7 +1,7 @@
 import { assert, runCommand, test } from '../helpers/index.ts';
 import { options } from '../helpers/shared-test-setups/my-v1-addon.ts';
 
-test('my-v1-addon | ember-testem (filter by --module)', () => {
+test('my-v1-addon | ember-testem --module', () => {
   const output = runCommand(
     'ember-test --module "Integration | Component | ui/form/checkbox"',
     options,
