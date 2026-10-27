@@ -1,5 +1,16 @@
 # install-ember-testem
 
+## 0.2.0
+
+### Minor Changes
+
+- [#34](https://github.com/ijlee2/ember-testem/pull/34) Allowed removing testem from development dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#31](https://github.com/ijlee2/ember-testem/pull/31) Allowed updating testem config ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#32](https://github.com/ijlee2/ember-testem/pull/32) Tested on Windows ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.4
 
 ### Patch Changes

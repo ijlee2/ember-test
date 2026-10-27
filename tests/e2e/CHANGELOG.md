@@ -1,5 +1,12 @@
 # e2e
 
+## 0.2.1
+
+### Patch Changes
+
+- [#33](https://github.com/ijlee2/ember-testem/pull/33) Standardized test names ([@ijlee2](https://github.com/ijlee2))
+- [#33](https://github.com/ijlee2/ember-testem/pull/33) Updated README ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes

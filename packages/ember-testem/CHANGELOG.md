@@ -1,5 +1,12 @@
 # ember-testem
 
+## 0.5.2
+
+### Patch Changes
+
+- [#33](https://github.com/ijlee2/ember-testem/pull/33) Updated README ([@ijlee2](https://github.com/ijlee2))
+- [#32](https://github.com/ijlee2/ember-testem/pull/32) Tested on Windows ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.5.1
 
 ### Patch Changes
