@@ -1,5 +1,11 @@
 # my-v2-addon
 
+## 0.3.2
+
+### Patch Changes
+
+- [#37](https://github.com/ijlee2/ember-testem/pull/37) Simplified setup for v2 addons ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes

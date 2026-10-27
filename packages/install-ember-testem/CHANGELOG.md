@@ -1,5 +1,13 @@
 # install-ember-testem
 
+## 0.3.0
+
+### Minor Changes
+
+- [#38](https://github.com/ijlee2/ember-testem/pull/38) Set up testing for v2 addons ([@ijlee2](https://github.com/ijlee2))
+- [#36](https://github.com/ijlee2/ember-testem/pull/36) Analyzed project to make better decisions ([@ijlee2](https://github.com/ijlee2))
+- [#35](https://github.com/ijlee2/ember-testem/pull/35) Allowed updating vite config ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes

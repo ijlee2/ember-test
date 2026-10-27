@@ -1,5 +1,12 @@
 # ember-testem
 
+## 0.5.3
+
+### Patch Changes
+
+- [#39](https://github.com/ijlee2/ember-testem/pull/39) Recommended using install-ember-testem in README ([@ijlee2](https://github.com/ijlee2))
+- [#37](https://github.com/ijlee2/ember-testem/pull/37) Simplified setup for v2 addons ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.5.2
 
 ### Patch Changes
