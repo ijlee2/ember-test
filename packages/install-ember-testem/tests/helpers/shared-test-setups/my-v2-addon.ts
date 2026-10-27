@@ -6,6 +6,10 @@ const codemodOptions: CodemodOptions = {
 
 const options: Options = {
   packageType: 'v2-addon',
+  project: {
+    hasEmberTestem: false,
+    hasTypeScript: true,
+  },
   projectRoot: 'tmp/my-v2-addon',
 };
 
