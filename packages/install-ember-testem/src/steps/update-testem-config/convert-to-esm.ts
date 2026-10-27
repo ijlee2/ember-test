@@ -4,6 +4,8 @@ import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
 
+import type { Options } from '../../types/index.js';
+
 type ObjectProperty = ReturnType<typeof AST.builders.objectProperty>;
 
 function createDefaultExport(file: string): string {
@@ -48,7 +50,9 @@ function createDefaultExport(file: string): string {
   return AST.print(ast);
 }
 
-export function convertToEsm(filePath: string, projectRoot: string): void {
+export function convertToEsm(filePath: string, options: Options): void {
+  const { projectRoot } = options;
+
   let file = readFileSync(join(projectRoot, filePath), 'utf8');
 
   file = createDefaultExport(file);

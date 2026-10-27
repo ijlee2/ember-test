@@ -15,7 +15,7 @@ test('steps | update-testem-config > config does not exist', function () {
   const inputProject = {};
 
   const outputProject = {
-    'testem.mjs': normalizeFile([
+    'testem.mts': normalizeFile([
       `export default {`,
       `  browser_args: {`,
       `    Chrome: {`,

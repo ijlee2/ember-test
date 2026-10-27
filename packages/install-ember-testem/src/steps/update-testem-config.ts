@@ -22,12 +22,12 @@ export function updateTestemConfig(options: Options): void {
   const filePath = findUserConfig(projectRoot);
 
   if (filePath === undefined) {
-    createConfig(projectRoot);
+    createConfig(options);
     return;
   }
 
   if (filePath.endsWith('.cjs') || filePath.endsWith('.js')) {
-    convertToEsm(filePath, projectRoot);
+    convertToEsm(filePath, options);
     return;
   }
 }
