@@ -360,6 +360,9 @@ importers:
       '@types/node':
         specifier: ^22.20.5
         version: 22.20.5
+      '@types/sinon':
+        specifier: ^22.0.2
+        version: 22.0.2
       '@types/yargs':
         specifier: ^17.0.35
         version: 17.0.35
@@ -372,6 +375,9 @@ importers:
       prettier:
         specifier: ^3.9.10
         version: 3.9.10
+      sinon:
+        specifier: ^22.1.0
+        version: 22.1.0
       typescript:
         specifier: ^6.0.3
         version: 6.0.3

@@ -263,7 +263,7 @@ ember-test --random gflqlwrm59j
 
 ## Compatibility
 
-- Node.js v22.17 or above
+- Node.js v22.22 or above
 
 
 ## Contributing
