@@ -1,5 +1,11 @@
 # install-ember-testem
 
+## 0.3.2
+
+### Patch Changes
+
+- [#43](https://github.com/ijlee2/ember-testem/pull/43) Fixed typo in latestVersions ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes
