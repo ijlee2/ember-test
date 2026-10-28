@@ -1,5 +1,5 @@
 const latestVersions = new Map([
-  ['@ember/test-helpers', '^5.7.0'],
+  ['@ember/test-helpers', '5.7.0'],
   ['@embroider/macros', '1.21.4'],
   ['@embroider/vite', '1.8.0'],
   ['@types/qunit', '2.19.14'],
