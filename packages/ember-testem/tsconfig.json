@@ -4,7 +4,7 @@
     "declaration": false,
     "outDir": "dist-for-testing",
     "rootDir": ".",
-    "types": ["@types/node", "@types/yargs"]
+    "types": ["@types/node", "@types/sinon", "@types/yargs"]
   },
   "include": ["bin", "src", "tests", "*.mts"],
   "exclude": ["src/blueprints", "tests/fixtures"]
