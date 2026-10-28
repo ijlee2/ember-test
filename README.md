@@ -33,7 +33,7 @@ pnpx install-ember-testem
 
 ## Compatibility
 
-- Node.js v22.22 or above
+- Node.js v22 or above
 
 
 ## Contributing
