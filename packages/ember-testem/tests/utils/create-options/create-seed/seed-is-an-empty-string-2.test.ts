@@ -1,28 +1,26 @@
 import { assert, test } from '@codemod-utils/tests';
-import { stub } from 'sinon';
 
 import { createSeed } from '../../../../src/utils/create-options/create-seed.js';
+import { restoreMethods, stubMethods } from '../../../helpers/stub.js';
 
 test('utils | create-options | create-seed > seed is an empty string (2)', function () {
-  const consoleLog = stub(console, 'log');
-  const mathRandom = stub(Math, 'random');
+  const stubs = stubMethods();
 
-  mathRandom.onCall(0).returns(0);
-  mathRandom.onCall(1).returns(1 - 1e-17);
-  mathRandom.onCall(2).returns(0.913);
+  stubs.mathRandom.onCall(0).returns(0);
+  stubs.mathRandom.onCall(1).returns(1 - 1e-17);
+  stubs.mathRandom.onCall(2).returns(0.913);
 
   const seed = createSeed('');
 
   assert.strictEqual(seed, 'wv8xeornbtb');
 
-  assert.strictEqual(consoleLog.calledOnce, true);
-  assert.strictEqual(mathRandom.calledThrice, true);
+  assert.strictEqual(stubs.consoleLog.calledOnce, true);
+  assert.strictEqual(stubs.mathRandom.calledThrice, true);
 
   assert.deepStrictEqual(
-    consoleLog.args[0]?.[0],
+    stubs.consoleLog.args[0]?.[0],
     'Randomizing tests with seed: wv8xeornbtb',
   );
 
-  consoleLog.restore();
-  mathRandom.restore();
+  restoreMethods();
 });
