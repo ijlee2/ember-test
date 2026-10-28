@@ -1,7 +1,12 @@
+type Item = {
+  message?: string;
+  passed: boolean;
+};
+
 type Data = {
-  error?: Error;
+  error: Error | undefined;
   failed: number;
-  items: unknown[];
+  items: Item[];
   launcherId: string;
   logs: {
     text: string;
@@ -9,11 +14,11 @@ type Data = {
   }[];
   name: string;
   originalResultObj: {
-    failed: 0 | 1;
+    failed: number;
     id: number;
-    items: unknown[];
+    items: Item[];
     name: string;
-    passed: 0 | 1;
+    passed: number;
     runDuration: number;
     skipped: boolean;
     testId: string;
