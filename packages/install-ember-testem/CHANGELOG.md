@@ -1,5 +1,11 @@
 # install-ember-testem
 
+## 0.3.3
+
+### Patch Changes
+
+- [#48](https://github.com/ijlee2/ember-testem/pull/48) Allowed installing ember-testem@0.7.0 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.2
 
 ### Patch Changes

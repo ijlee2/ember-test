@@ -1,5 +1,16 @@
 # ember-testem
 
+## 0.7.0
+
+### Minor Changes
+
+- [#45](https://github.com/ijlee2/ember-testem/pull/45) Removed --test-port ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#47](https://github.com/ijlee2/ember-testem/pull/47) Loosened Node requirement ([@ijlee2](https://github.com/ijlee2))
+- [#47](https://github.com/ijlee2/ember-testem/pull/47) Updated README ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.0
 
 ### Minor Changes
