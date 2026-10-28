@@ -31,7 +31,7 @@
     "ember-qunit": "^9.2.0",
     "ember-source": "~7.3.0",
     "ember-strict-application-resolver": "^0.1.1",
-    "ember-testem": "^0.5.3",
+    "ember-testem": "^0.6.0",
     "qunit": "^3.0.0",
     "qunit-dom": "^3.6.0",
     "rollup": "^4.63.5",
