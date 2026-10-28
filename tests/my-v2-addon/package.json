@@ -66,9 +66,9 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.11.0",
     "decorator-transforms": "^2.4.0",
-    "ember-container-query": "^7.1.6",
+    "ember-container-query": "^7.1.7",
     "ember-truth-helpers": "^5.0.0",
-    "embroider-css-modules": "^4.1.5"
+    "embroider-css-modules": "^4.1.6"
   },
   "devDependencies": {
     "@babel/core": "^8.0.9",
@@ -96,17 +96,17 @@
     "babel-plugin-ember-template-compilation": "^4.0.1",
     "concurrently": "^10.0.6",
     "ember-a11y-testing": "^8.0.1",
-    "ember-intl": "^9.3.3",
+    "ember-intl": "^9.3.4",
     "ember-qunit": "^9.2.0",
     "ember-source": "~7.3.1",
     "ember-strict-application-resolver": "^0.1.1",
     "ember-testem": "workspace:*",
     "eslint": "^10.13.0",
-    "postcss": "^8.5.31",
+    "postcss": "^8.5.32",
     "prettier": "^3.9.10",
     "qunit": "^3.0.0",
     "qunit-dom": "^3.6.0",
-    "rollup": "^4.65.0",
+    "rollup": "^4.65.1",
     "rollup-plugin-postcss": "^4.0.2",
     "stylelint": "^17.16.0",
     "type-css-modules": "^3.2.13",
