@@ -1,3 +1,4 @@
+import { availableParallelism } from 'node:os';
 import { normalize } from 'node:path';
 
 import { assert, test } from '@codemod-utils/tests';
@@ -39,7 +40,7 @@ test('steps | run-tests | run-tests-in-ci > error (testem)', async function () {
     config_dir: 'tmp/my-project',
     cwd: normalize('tmp/my-project/dist'),
     launch: false,
-    parallel: 1,
+    parallel: availableParallelism(),
     port: 0,
     query_params: '',
   });

@@ -1,3 +1,4 @@
+import { availableParallelism } from 'node:os';
 import { join } from 'node:path';
 
 import Testem from 'testem';
@@ -19,7 +20,7 @@ export async function runTestsInCI(options: Options): Promise<void> {
     ...startOptions,
     config_dir: projectRoot,
     cwd: join(projectRoot, buildPath),
-    parallel: 1,
+    parallel: availableParallelism(),
     query_params: getQueryParams(options),
   });
 
