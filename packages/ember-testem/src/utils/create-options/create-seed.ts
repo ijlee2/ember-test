@@ -1,3 +1,7 @@
+function generateSeed(): string {
+  return Math.random().toString(36).slice(2);
+}
+
 export function createSeed(seed: string | undefined): string | undefined {
   switch (seed) {
     case undefined: {
@@ -5,7 +9,11 @@ export function createSeed(seed: string | undefined): string | undefined {
     }
 
     case '': {
-      const seedNew = Math.random().toString(36).slice(2);
+      let seedNew = generateSeed();
+
+      while (seedNew === '') {
+        seedNew = generateSeed();
+      }
 
       console.log(`Randomizing tests with seed: ${seedNew}`);
 
