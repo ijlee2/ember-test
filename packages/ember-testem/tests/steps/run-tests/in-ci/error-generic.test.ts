@@ -1,20 +1,15 @@
 import { normalize } from 'node:path';
 
 import { assert, test } from '@codemod-utils/tests';
-import { stub } from 'sinon';
-import Testem from 'testem';
 
 import { runTests } from '../../../../src/steps/index.js';
+import { restoreMethods, stubMethods } from '../../../helpers/stub.js';
 
 test('steps | run-tests | run-tests-in-ci > error (generic)', async function () {
-  const consoleError = stub(console, 'error');
-  const testemRestart = stub(Testem.prototype, 'restart');
-  const testemSetDefaultOptions = stub(Testem.prototype, 'setDefaultOptions');
-  const testemStartCI = stub(Testem.prototype, 'startCI').yields(
-    0,
-    new Error('Some error'),
-  );
-  const testemStartDev = stub(Testem.prototype, 'startDev').yields(0);
+  const stubs = stubMethods();
+
+  stubs.testemStartCI.yields(0, new Error('Some error'));
+  stubs.testemStartDev.yields(0);
 
   await runTests({
     buildPath: 'dist',
@@ -28,15 +23,16 @@ test('steps | run-tests | run-tests-in-ci > error (generic)', async function () 
     },
   });
 
-  assert.strictEqual(consoleError.calledOnce, true);
-  assert.strictEqual(testemRestart.notCalled, true);
-  assert.strictEqual(testemSetDefaultOptions.calledOnce, true);
-  assert.strictEqual(testemStartCI.calledOnce, true);
-  assert.strictEqual(testemStartDev.notCalled, true);
+  assert.strictEqual(stubs.chokidarWatch.notCalled, true);
+  assert.strictEqual(stubs.consoleError.calledOnce, true);
+  assert.strictEqual(stubs.testemRestart.notCalled, true);
+  assert.strictEqual(stubs.testemSetDefaultOptions.calledOnce, true);
+  assert.strictEqual(stubs.testemStartCI.calledOnce, true);
+  assert.strictEqual(stubs.testemStartDev.notCalled, true);
 
-  assert.strictEqual(consoleError.args[0]?.[0], 'Some error');
+  assert.strictEqual(stubs.consoleError.args[0]?.[0], 'Some error');
 
-  assert.deepStrictEqual(testemSetDefaultOptions.args[0]?.[0], {
+  assert.deepStrictEqual(stubs.testemSetDefaultOptions.args[0]?.[0], {
     config_dir: 'tmp/my-project',
     cwd: normalize('tmp/my-project/dist'),
     launch: false,
@@ -45,14 +41,10 @@ test('steps | run-tests | run-tests-in-ci > error (generic)', async function () 
     query_params: '',
   });
 
-  assert.deepStrictEqual(testemStartCI.args[0]?.[0], {
+  assert.deepStrictEqual(stubs.testemStartCI.args[0]?.[0], {
     launch: false,
     port: 0,
   });
 
-  consoleError.restore();
-  testemRestart.restore();
-  testemSetDefaultOptions.restore();
-  testemStartCI.restore();
-  testemStartDev.restore();
+  restoreMethods();
 });
