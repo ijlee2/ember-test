@@ -5,7 +5,7 @@
 ### Minor Changes
 
 - [#41](https://github.com/ijlee2/ember-testem/pull/41) Updated testem to 4.0.0-beta.3 ([@ijlee2](https://github.com/ijlee2))
-- [#40](https://github.com/ijlee2/ember-testem/pull/40) Required Node 22.22 or above (chokidar@v6) ([@ijlee2](https://github.com/ijlee2))
+- [#40](https://github.com/ijlee2/ember-testem/pull/40) ~Required Node 22.22 or above (chokidar@v6)~ ([@ijlee2](https://github.com/ijlee2))
 
 ### Patch Changes
 
@@ -52,7 +52,7 @@
 
 ### Minor Changes
 
-- [#23](https://github.com/ijlee2/ember-testem/pull/23) Required Node 22.17.0 or above ([@ijlee2](https://github.com/ijlee2))
+- [#23](https://github.com/ijlee2/ember-testem/pull/23) ~Required Node 22.17.0 or above~ ([@ijlee2](https://github.com/ijlee2))
 - [#23](https://github.com/ijlee2/ember-testem/pull/23) Updated testem to 4.0.0-beta.1 ([@ijlee2](https://github.com/ijlee2))
 - [#20](https://github.com/ijlee2/ember-testem/pull/20) Added e2e tests ([@ijlee2](https://github.com/ijlee2))
 

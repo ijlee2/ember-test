@@ -5,20 +5,24 @@ _Backward- and forward-compatible testing for Ember projects_
 
 ## Why?
 
-Until now, testing Ember apps and addons required `ember-cli`, a monolith package that is written in JavaScript and has little relevance in v2 apps and v2 addons. Ember's test ecosystem (e.g. `ember-exam`, `@percy/ember`) is at risk because it is built on `ember-cli`.
+Until now, testing Ember apps and addons required `ember-cli`, a monolith package that is written in JavaScript and has less relevance in v2 apps and v2 addons. Production projects may be at risk because tools like `ember-exam` and `@percy/ember` are built on `ember-cli`.
 
 `ember-testem` aims to show that:
 
 - The fix is minimal, backward-, and forward-compatible (apps with strict resolver, apps without `ember-cli`).
 - We can keep using `qunit` and `testem`. No need to switch to another test framework and rewrite tests.
-- We can keep using battle-tested packages like `@embroider/try`, `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
+- It works with battle-tested packages like `@embroider/try`, `@percy/ember`, `ember-a11y-testing`, `ember-qunit`, `ember-test-selectors`, `miragejs`, and `qunit-dom`.
 
 
 ## Quickstart
 
 > [!TIP]
 >
-> From the root of your Ember app or addon, run `pnpx install-ember-testem` to automate the setup.
+> From the root of your Ember app or addon, run `install-ember-testem` to set up `ember-testem`.
+>
+> ```sh
+> pnpx install-ember-testem
+> ```
 
 1\. Install `ember-testem` as a development dependency. The package provides an executable named `ember-test`.
 
@@ -118,9 +122,11 @@ See [my-v1-app](../../tests/my-v1-app) for an example.
 
 <summary>V2 addons</summary>
 
+See [my-v2-addon](../../tests/my-v2-addon) for an example.
+
 In general, I recommend creating a test app as a separate package (using workspaces). This way, you can separate dependencies for source code and testing (avoid past issues with v1 addons). You would set up `ember-testem` by following the steps for v2 apps.
 
-If you still want to create the test app in the same package, you will need to install and configure additional dependencies. See [my-v2-addon](../../tests/my-v2-addon) for an example.
+If you still want to create the test app in the same package, you will need to install and configure additional dependencies. You can use `install-ember-testem` to get started.
 
 ```json
 {
@@ -130,13 +136,6 @@ If you still want to create the test app in the same package, you will need to i
   }
 }
 ```
-
-Files that need changes:
-
-- Babel (`babel.test.config.mjs`)
-- Dependencies (`package.json`)
-- TypeScript (`tsconfig.json`, `tsconfig.build.json`)
-- Vite (`vite.test.config.mts`)
 
 </details>
 
@@ -263,7 +262,7 @@ ember-test --random gflqlwrm59j
 
 ## Compatibility
 
-- Node.js v22.22 or above
+- Node.js v22 or above
 
 
 ## Contributing
