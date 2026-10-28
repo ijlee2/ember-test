@@ -45,17 +45,11 @@ const argv = yargs(hideBin(process.argv))
     describe: 'Launch test browser',
     type: 'boolean',
   })
-  .option('test-port', {
-    describe:
-      'Port for running tests. Pass 0 to automatically pick an available port.',
-    type: 'number',
-  })
-  .deprecateOption('test-port', 'Use --port instead.')
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
   buildPath: argv['path'],
-  port: argv['test-port'] ?? argv['port'],
+  port: argv['port'],
   projectRoot: argv['root'] ?? process.cwd(),
   qunit: {
     filter: argv['filter'],
