@@ -1,5 +1,17 @@
 # ember-testem
 
+## 0.6.0
+
+### Minor Changes
+
+- [#41](https://github.com/ijlee2/ember-testem/pull/41) Updated testem to 4.0.0-beta.3 ([@ijlee2](https://github.com/ijlee2))
+- [#40](https://github.com/ijlee2/ember-testem/pull/40) Required Node 22.22 or above (chokidar@v6) ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#40](https://github.com/ijlee2/ember-testem/pull/40) Ensured that generated seed is non-empty ([@ijlee2](https://github.com/ijlee2))
+- [#40](https://github.com/ijlee2/ember-testem/pull/40) Added integration and unit tests ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.5.3
 
 ### Patch Changes
