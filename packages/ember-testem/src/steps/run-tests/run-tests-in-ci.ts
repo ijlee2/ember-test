@@ -8,14 +8,14 @@ import { getQueryParams } from '../../utils/run-tests/get-query-params.js';
 export async function runTestsInCI(options: Options): Promise<void> {
   const { buildPath, port, projectRoot } = options;
 
-  const testemInstance = new Testem();
+  const testem = new Testem();
 
   const startOptions = {
     launch: false,
     port,
   };
 
-  testemInstance.setDefaultOptions({
+  testem.setDefaultOptions({
     ...startOptions,
     config_dir: projectRoot,
     cwd: join(projectRoot, buildPath),
@@ -24,7 +24,7 @@ export async function runTestsInCI(options: Options): Promise<void> {
   });
 
   return new Promise((resolve, reject) => {
-    testemInstance.startCI(startOptions, (exitCode, error) => {
+    testem.startCI(startOptions, (exitCode, error) => {
       if (error) {
         reject(error);
       } else if (exitCode !== 0) {
